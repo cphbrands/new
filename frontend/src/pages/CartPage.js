@@ -34,6 +34,7 @@ const CartPage = () => {
           </Link>
         </div>
       </div>
+      </>
     );
   }
 
