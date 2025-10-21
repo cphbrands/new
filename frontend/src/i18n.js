@@ -395,6 +395,8 @@ const resources = {
       'cart.title': 'Handlekurv',
       'cart.continue': 'Fortsett å handle',
       'cart.checkout': 'Gå til kassen',
+      'cart.christmasGift': 'Dette er en julegave',
+      'cart.christmasGift.info': 'Utvidet returrett gjelder til januar 2026',
       
       'wishlist.title': 'Min Ønskeliste',
       
