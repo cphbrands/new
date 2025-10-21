@@ -321,6 +321,8 @@ const resources = {
       'cart.christmasGift.info': 'Förlängd returpolicy gäller till januari 2026',
       
       'wishlist.title': 'Min Önskelista',
+      'wishlist.empty': 'Din önskelista är tom',
+      'wishlist.empty.desc': 'Du har inga produkter i din önskelista. Lägg till dina favoriter!',
       
       'common.new': 'Nyhet',
       'common.home': 'Hem',
