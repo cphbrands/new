@@ -1,5 +1,6 @@
 import React from "react";
 import "@/App.css";
+import "./i18n";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CartProvider } from "./context/CartContext";
 import { WishlistProvider } from "./context/WishlistContext";
@@ -10,6 +11,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Breadcrumbs from "./components/Breadcrumbs";
 import BackToTop from "./components/BackToTop";
+import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import CategoryPage from "./pages/CategoryPage";
 import ProductPage from "./pages/ProductPage";
@@ -23,6 +25,7 @@ function App() {
         <WishlistProvider>
           <RecentlyViewedProvider>
             <BrowserRouter>
+              <ScrollToTop />
               <div className="App">
                 <Navbar />
                 <Breadcrumbs />
