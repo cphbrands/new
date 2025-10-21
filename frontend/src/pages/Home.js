@@ -76,18 +76,18 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="space-y-2">
               <div className="text-2xl">📦</div>
-              <h3 className="font-semibold">Fri Levering 2-5 hverdage</h3>
-              <p className="text-sm text-zinc-600">Hurtig og sikker levering</p>
+              <h3 className="font-semibold">{t('footer.shipping.fast')}</h3>
+              <p className="text-sm text-zinc-600">{t('footer.shipping.desc')}</p>
             </div>
             <div className="space-y-2">
               <div className="text-2xl">🛡️</div>
-              <h3 className="font-semibold">Sikker betaling</h3>
-              <p className="text-sm text-zinc-600">100% beskyttede transaktioner</p>
+              <h3 className="font-semibold">{t('footer.payment')}</h3>
+              <p className="text-sm text-zinc-600">{t('footer.payment.desc')}</p>
             </div>
             <div className="space-y-2">
               <div className="text-2xl">🎁</div>
-              <h3 className="font-semibold">Udvidet retur</h3>
-              <p className="text-sm text-zinc-600">Julegaver frem til januar 2026</p>
+              <h3 className="font-semibold">{t('footer.return.extended')}</h3>
+              <p className="text-sm text-zinc-600">{t('footer.return.desc')}</p>
             </div>
           </div>
         </div>
