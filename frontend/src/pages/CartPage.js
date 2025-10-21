@@ -156,8 +156,8 @@ const CartPage = () => {
           </div>
         </div>
       </div>
-      </>
-    );
-  };
+    </>
+  );
+};
 
 export default CartPage;
