@@ -50,7 +50,14 @@ const ProductPage = () => {
     };
 
     loadProduct();
-  }, [id, addToRecentlyViewed]);
+    
+    // Cleanup
+    return () => {
+      setProduct(null);
+      setRelatedProducts([]);
+      setShowShareMenu(false);
+    };
+  }, [id]);
 
   const recentlyViewedFiltered = recentlyViewed.filter(p => p.id !== id).slice(0, 4);
   const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
