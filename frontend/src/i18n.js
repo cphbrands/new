@@ -291,6 +291,25 @@ const resources = {
       'product.shipping.info': 'Fri frakt 2-5 arbetsdagar',
       'product.related': 'Relaterade produkter',
       
+      // Sort
+      'sort.label': 'Sortera',
+      'sort.default': 'Standard',
+      'sort.newest': 'Nyaste först',
+      'sort.priceAsc': 'Pris: Låg till Hög',
+      'sort.priceDesc': 'Pris: Hög till Låg',
+      'sort.nameAsc': 'Namn: A-Ö',
+      'sort.nameDesc': 'Namn: Ö-A',
+      
+      // Quick View
+      'quickview.title': 'Snabbvisning',
+      'quickview.fullDetails': 'Visa fullständiga detaljer',
+      'quickview.quality': 'Kvalitetsprodukt från',
+      
+      // Toast
+      'toast.addedToCart': 'tillagd i varukorgen',
+      'toast.addedToWishlist': 'Tillagd i önskelistan',
+      'toast.removedFromWishlist': 'Borttagen från önskelistan',
+      
       'cart.title': 'Varukorg',
       'cart.continue': 'Fortsätt handla',
       'cart.checkout': 'Gå till kassan',
