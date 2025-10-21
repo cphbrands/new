@@ -338,6 +338,12 @@ const resources = {
       'home.hero.find': 'Hitta den perfekta presenten',
       'home.giftcard': 'Presentkort',
       
+      'home.hero.jul': 'Kliv in i ett magiskt juluniversum',
+      'home.hero.gaver': 'Mer än 10 000 presentidéer',
+      'home.hero.explore': 'Utforska kollektionen',
+      'home.hero.find': 'Hitta den perfekta presenten',
+      'home.giftcard': 'Presentkort',
+      
       'footer.shipping.fast': 'Fri frakt 2-5 dagar',
       'footer.shipping.desc': 'Snabb och säker leverans',
       'footer.payment': 'Säker betalning',
