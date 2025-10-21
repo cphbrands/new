@@ -195,6 +195,13 @@ const resources = {
       'common.products': 'products',
       'common.popularCategories': 'Popular categories',
       
+      // Home
+      'home.hero.jul': 'Step into a magical Christmas universe',
+      'home.hero.gaver': 'More than 10,000 gift ideas',
+      'home.hero.explore': 'Explore the collection',
+      'home.hero.find': 'Find the perfect gift',
+      'home.giftcard': 'Gift Card',
+      
       // Toast messages
       'toast.addedToCart': 'added to your cart',
       'toast.addedToWishlist': 'Added to wishlist',
