@@ -570,6 +570,7 @@ const resources = {
       
       'cart.title': 'Panier',
       'cart.empty': 'Votre panier est vide',
+      'cart.empty.desc': 'Vous n\'avez aucun article dans votre panier. Commencez vos achats maintenant!',
       'cart.continue': 'Continuer vos achats',
       'cart.checkout': 'Passer à la caisse',
       'cart.summary': 'Résumé de la commande',
