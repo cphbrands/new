@@ -106,6 +106,9 @@ const resources = {
       'home.hero.explore': 'Udforsk kollektionen',
       'home.hero.find': 'Find den perfekte gave',
       'home.giftcard': 'Gavekort',
+      'home.nordic.quality': 'Nordisk Kvalitet',
+      'home.nordic.title': 'Skandinavisk Excellence - Kvalitet i Verdensklasse',
+      'home.nordic.description': 'Håndplukket nordisk design og håndværk. Hver eneste produkt er nøje udvalgt for at sikre den højeste kvalitet, ægte skandinaviske materialer og tidløst design. Vi repræsenterer det bedste af nordisk livsstil.',
       
       // Toast messages
       'toast.addedToCart': 'er tilføjet til din kurv',
