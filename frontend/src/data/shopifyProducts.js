@@ -2,7 +2,8 @@ import { shopifyService } from '../services/shopifyService';
 
 let cachedProducts = null;
 let cacheTimestamp = null;
-const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
+const CACHE_DURATION = 10 * 60 * 1000; // 10 minutes (øget fra 5)
+let pendingRequest = null; // Prevent duplicate requests
 
 export const getShopifyProducts = async () => {
   // Return cached data if still valid
@@ -10,13 +11,21 @@ export const getShopifyProducts = async () => {
     return cachedProducts;
   }
 
+  // If there's already a pending request, return it
+  if (pendingRequest) {
+    return pendingRequest;
+  }
+
   try {
-    const products = await shopifyService.getAllProducts(100);
+    pendingRequest = shopifyService.getAllProducts(100);
+    const products = await pendingRequest;
     cachedProducts = products;
     cacheTimestamp = Date.now();
+    pendingRequest = null;
     return products;
   } catch (error) {
     console.error('Failed to load Shopify products, using fallback:', error);
+    pendingRequest = null;
     // Return empty array as fallback
     return [];
   }
