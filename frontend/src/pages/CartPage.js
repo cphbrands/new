@@ -20,7 +20,7 @@ const CartPage = () => {
           description="Din indkøbskurv"
         />
         <div className="container mx-auto px-4 py-16">
-        <div className="max-w-md mx-auto text-center">
+          <div className="max-w-md mx-auto text-center">
           <ShoppingBag className="w-16 h-16 mx-auto mb-4 text-zinc-400" />
           <h2 className="text-2xl font-bold mb-4">Din kurv er tom</h2>
           <p className="text-zinc-600 mb-8">
