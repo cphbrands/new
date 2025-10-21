@@ -175,6 +175,12 @@ const ProductPage = () => {
               </span>
             )}
             
+            {/* Nordic Quality Badge */}
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-50 to-blue-100 px-4 py-2 rounded-md border border-blue-200">
+              <Award className="w-4 h-4 text-blue-900" />
+              <span className="text-sm font-medium text-blue-900">{t('home.nordic.quality')}</span>
+            </div>
+            
             <div>
               <p className="text-zinc-600 mb-2">{product.brand}</p>
               <h1 className="text-3xl md:text-4xl font-bold mb-4">{product.name}</h1>
