@@ -315,6 +315,8 @@ const resources = {
       'toast.removedFromWishlist': 'Borttagen från önskelistan',
       
       'cart.title': 'Varukorg',
+      'cart.empty': 'Din varukorg är tom',
+      'cart.empty.desc': 'Du har inga varor i din varukorg. Börja handla nu!',
       'cart.continue': 'Fortsätt handla',
       'cart.checkout': 'Gå till kassan',
       'cart.christmasGift': 'Detta är en julklapp',
