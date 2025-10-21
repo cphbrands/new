@@ -143,7 +143,7 @@ const CategoryPageNew = () => {
               <div className="space-y-2">
                 {product.isNew && (
                   <span className="inline-block bg-zinc-900 text-white text-xs px-2 py-1 rounded">
-                    Nyhed
+                    {t('common.new')}
                   </span>
                 )}
                 <Link to={`/produkt/${product.id}`}>
@@ -151,7 +151,7 @@ const CategoryPageNew = () => {
                   <h3 className="font-medium hover:underline line-clamp-2">{product.name}</h3>
                 </Link>
                 <div className="flex items-center justify-between">
-                  <p className="text-lg font-semibold">{product.price.toFixed(2)} kr.</p>
+                  <p className="text-lg font-semibold">{formatPrice(product.price)}</p>
                   <button
                     onClick={(e) => handleAddToCart(e, product)}
                     disabled={!product.inStock}
