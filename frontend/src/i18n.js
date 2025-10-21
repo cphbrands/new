@@ -82,6 +82,17 @@ const resources = {
       'common.loading': 'Henter...',
       'common.error': 'Fejl',
       'common.home': 'Hjem',
+      'common.categories': 'Kategorier',
+      'common.product': 'Produkt',
+      'common.products': 'produkter',
+      'common.popularCategories': 'Populære kategorier',
+      
+      // Breadcrumbs  
+      'breadcrumb.home': 'Hjem',
+      'breadcrumb.categories': 'Kategorier',
+      'breadcrumb.product': 'Produkt',
+      'breadcrumb.wishlist': 'Ønskeliste',
+      'breadcrumb.cart': 'Indkøbskurv',
     }
   },
   en: {
