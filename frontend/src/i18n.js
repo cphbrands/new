@@ -491,6 +491,8 @@ const resources = {
       'cart.christmasGift.info': 'Verlängerte Rückgabefrist gilt bis Januar 2026',
       
       'wishlist.title': 'Meine Wunschliste',
+      'wishlist.empty': 'Ihre Wunschliste ist leer',
+      'wishlist.empty.desc': 'Sie haben keine Produkte in Ihrer Wunschliste. Fügen Sie Ihre Favoriten hinzu!',
       
       'common.new': 'Neu',
       'common.home': 'Startseite',
