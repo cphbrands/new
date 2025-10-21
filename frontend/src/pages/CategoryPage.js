@@ -83,18 +83,18 @@ const CategoryPageNew = () => {
         <div className="mb-12 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">{title}</h1>
           <p className="text-xl text-zinc-600 max-w-2xl mx-auto">{description}</p>
-          <p className="text-sm text-zinc-500 mt-4">{products.length} produkter</p>
+          <p className="text-sm text-zinc-500 mt-4">{products.length} {t('common.products')}</p>
         </div>
 
         {/* Loading State */}
         {loading ? (
           <div className="flex items-center justify-center py-20">
             <Loader2 className="w-10 h-10 animate-spin text-zinc-400" />
-            <span className="ml-3 text-zinc-600">Henter produkter...</span>
+            <span className="ml-3 text-zinc-600">{t('category.loading')}</span>
           </div>
         ) : products.length === 0 ? (
           <div className="text-center py-20">
-            <p className="text-xl text-zinc-600">Ingen produkter fundet i denne kategori.</p>
+            <p className="text-xl text-zinc-600">{t('category.none')}</p>
           </div>
         ) : (
           <>
