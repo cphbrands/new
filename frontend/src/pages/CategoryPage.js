@@ -49,8 +49,8 @@ const CategoryPageNew = () => {
     e.stopPropagation();
     addToCart(product);
     toast({
-      title: "Tilføjet til kurv",
-      description: `${product.name} er tilføjet til din kurv.`,
+      title: t('product.addToCart'),
+      description: `${product.name} ${t('toast.addedToCart')}`,
     });
   };
 
@@ -59,10 +59,8 @@ const CategoryPageNew = () => {
     e.stopPropagation();
     toggleWishlist(product);
     toast({
-      title: isInWishlist(product.id) ? "Fjernet fra ønskeliste" : "Tilføjet til ønskeliste",
-      description: isInWishlist(product.id) 
-        ? `${product.name} er fjernet fra din ønskeliste.`
-        : `${product.name} er tilføjet til din ønskeliste.`,
+      title: isInWishlist(product.id) ? t('toast.removedFromWishlist') : t('toast.addedToWishlist'),
+      description: `${product.name}`,
     });
   };
 
