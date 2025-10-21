@@ -448,12 +448,9 @@ const resources = {
       'home.hero.explore': 'Utforsk kolleksjonen',
       'home.hero.find': 'Finn den perfekte gaven',
       'home.giftcard': 'Gavekort',
-      
-      'home.hero.jul': 'Tre inn i et magisk juleunivers',
-      'home.hero.gaver': 'Mer enn 10 000 gaveideer',
-      'home.hero.explore': 'Utforsk kolleksjonen',
-      'home.hero.find': 'Finn den perfekte gaven',
-      'home.giftcard': 'Gavekort',
+      'home.nordic.quality': 'Nordisk Kvalitet',
+      'home.nordic.title': 'Skandinavisk Fortreffelighet - Kvalitet i Verdensklasse',
+      'home.nordic.description': 'Håndplukket nordisk design og håndverk. Hvert enkelt produkt er nøye utvalgt for å sikre høyeste kvalitet, ekte skandinaviske materialer og tidløst design. Vi representerer det beste av nordisk livsstil.',
       
       'footer.shipping.fast': 'Fri frakt 2-5 dager',
       'footer.shipping.desc': 'Rask og sikker levering',
