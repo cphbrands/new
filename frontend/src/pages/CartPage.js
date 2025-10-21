@@ -109,13 +109,8 @@ const CartPage = () => {
                 </div>
                 <div className="flex justify-between text-zinc-600">
                   <span>Fragt</span>
-                  <span>{shippingCost === 0 ? 'Gratis' : `${shippingCost.toFixed(2)} kr.`}</span>
+                  <span>Gratis</span>
                 </div>
-                {subtotal < 499 && (
-                  <p className="text-sm text-zinc-500">
-                    Køb for {(499 - subtotal).toFixed(2)} kr. mere for fri fragt
-                  </p>
-                )}
                 <div className="border-t border-zinc-300 pt-3 flex justify-between font-bold text-lg">
                   <span>Total</span>
                   <span>{total.toFixed(2)} kr.</span>
