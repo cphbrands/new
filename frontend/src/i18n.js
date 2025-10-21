@@ -709,8 +709,21 @@ const resources = {
       'home.giftcard': 'Tarjeta regalo',
       
       'footer.shipping.fast': 'Envío gratis 2-5 días',
+      'footer.shipping.desc': 'Entrega rápida y segura',
       'footer.payment': 'Pago seguro',
+      'footer.payment.desc': 'Transacciones 100% protegidas',
       'footer.return.extended': 'Devolución ampliada',
+      'footer.return.desc': 'Regalos navideños hasta enero 2026',
+      'footer.about': 'Sobre Bahne',
+      'footer.about.desc': 'No somos una cadena. Somos una familia de tiendas con espacio para experiencias de clientes, entusiasmo y una selección creada a partir de lo que nos gusta.',
+      'footer.help': 'Ayuda',
+      'footer.shop': 'Tienda',
+      'footer.contact': 'Contacto',
+      'footer.newsletter': 'Boletín',
+      'footer.newsletter.desc': 'Reciba ofertas exclusivas y noticias directamente en su bandeja de entrada.',
+      'footer.newsletter.placeholder': 'Tu email',
+      'footer.newsletter.submit': 'Suscribirse',
+      'footer.copyright': '© 2025 Bahne. Todos los derechos reservados.',
     }
   }
 };
