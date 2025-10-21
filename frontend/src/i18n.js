@@ -115,6 +115,7 @@ const resources = {
       // Quick View
       'quickview.title': 'Hurtig visning',
       'quickview.fullDetails': 'Se fulde detaljer',
+      'quickview.quality': 'Kvalitetsprodukt fra',
       
       // Breadcrumbs  
       'breadcrumb.home': 'Hjem',
