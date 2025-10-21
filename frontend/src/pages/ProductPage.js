@@ -225,7 +225,6 @@ const ProductPage = () => {
                 <h3 className="font-semibold mb-2">Levering</h3>
                 <ul className="text-sm text-zinc-600 space-y-1">
                   <li>• Fri levering 2-5 hverdage</li>
-                  <li>• Click & Collect gratis afhentning</li>
                   <li>• Levering til pakkeshop eller hjemmeadresse</li>
                 </ul>
               </div>
