@@ -108,7 +108,7 @@ const CategoryPageNew = () => {
           <>
             {/* Products Grid */}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {products.map(product => (
+          {displayedProducts.map(product => (
             <div key={product.id} className="group relative">
               <Link to={`/produkt/${product.id}`} className="block">
                 <div className="aspect-square overflow-hidden rounded-lg mb-3 bg-zinc-100 relative">
