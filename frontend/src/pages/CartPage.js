@@ -9,7 +9,7 @@ const CartPage = () => {
   const navigate = useNavigate();
 
   const subtotal = getCartTotal();
-  const shippingCost = subtotal >= 499 ? 0 : 39;
+  const shippingCost = 0; // Fri fragt altid
   const total = subtotal + shippingCost;
 
   if (cart.length === 0) {
