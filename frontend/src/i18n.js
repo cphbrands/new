@@ -561,6 +561,9 @@ const resources = {
       'home.hero.explore': 'Kollektion erkunden',
       'home.hero.find': 'Finden Sie das perfekte Geschenk',
       'home.giftcard': 'Geschenkkarte',
+      'home.nordic.quality': 'Nordische Qualität',
+      'home.nordic.title': 'Skandinavische Exzellenz - Weltklasse-Qualität',
+      'home.nordic.description': 'Handverlesenes nordisches Design und Handwerkskunst. Jedes einzelne Produkt wird sorgfältig ausgewählt, um höchste Qualität, authentische skandinavische Materialien und zeitloses Design zu gewährleisten. Wir repräsentieren das Beste des nordischen Lebensstils.',
       
       'footer.about': 'Über Bahne',
       'footer.help': 'Hilfe',
