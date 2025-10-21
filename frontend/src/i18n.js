@@ -234,6 +234,9 @@ const resources = {
       'home.hero.explore': 'Explore the collection',
       'home.hero.find': 'Find the perfect gift',
       'home.giftcard': 'Gift Card',
+      'home.nordic.quality': 'Nordic Quality',
+      'home.nordic.title': 'Scandinavian Excellence - World-Class Quality',
+      'home.nordic.description': 'Hand-picked Nordic design and craftsmanship. Every single product is carefully selected to ensure the highest quality, authentic Scandinavian materials and timeless design. We represent the very best of Nordic lifestyle.',
       
       // Toast messages
       'toast.addedToCart': 'added to your cart',
