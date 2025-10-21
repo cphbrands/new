@@ -141,6 +141,7 @@ const resources = {
       'category.julepynt.desc': 'Enchanting figures, beautiful decorations and everything that spreads Christmas spirit',
       'category.gaver.title': 'Gifts',
       'category.gaver.desc': 'More than 10,000 gift ideas for all occasions',
+      'category.all': 'All products',
       'category.products': 'products',
       'category.loading': 'Loading products...',
       'category.none': 'No products found in this category.',
