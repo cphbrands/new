@@ -14,7 +14,7 @@ const ProductPage = () => {
   const navigate = useNavigate();
   const { addToCart } = useCart();
   const { toggleWishlist, isInWishlist } = useWishlist();
-  const { recentlyViewed, addToRecentlyViewed } = useRecentlyViewedContext();
+  const { recentlyViewed, addToRecentlyViewed } = useRecentlyViewed();
   const [quantity, setQuantity] = useState(1);
   const [showShareMenu, setShowShareMenu] = useState(false);
   const [product, setProduct] = useState(null);
