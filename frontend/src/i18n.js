@@ -166,6 +166,17 @@ const resources = {
       'common.loading': 'Loading...',
       'common.error': 'Error',
       'common.home': 'Home',
+      'common.categories': 'Categories',
+      'common.product': 'Product',
+      'common.products': 'products',
+      'common.popularCategories': 'Popular categories',
+      
+      // Breadcrumbs
+      'breadcrumb.home': 'Home',
+      'breadcrumb.categories': 'Categories',
+      'breadcrumb.product': 'Product',
+      'breadcrumb.wishlist': 'Wishlist',
+      'breadcrumb.cart': 'Shopping Cart',
     }
   },
   sv: {
