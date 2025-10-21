@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { allProducts } from '../data/mockProducts';
-import { ShoppingCart, Heart, ChevronLeft, Share2 } from 'lucide-react';
+import { getShopifyProducts, getShopifyProductById } from '../data/shopifyProducts';
+import { ShoppingCart, Heart, ChevronLeft, Share2, Loader2 } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { useWishlist } from '../context/WishlistContext';
 import { useRecentlyViewed } from '../context/RecentlyViewedContext';
