@@ -1,13 +1,13 @@
 import axios from 'axios';
 
 const SHOPIFY_STORE_DOMAIN = 'hztmcs-09.myshopify.com';
-const STOREFRONT_ACCESS_TOKEN = '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';
+const ADMIN_ACCESS_TOKEN = 'f736803a6786e7c47579c2cc527669ca';
 const API_VERSION = '2024-01';
 
 const shopifyClient = axios.create({
-  baseURL: `https://${SHOPIFY_STORE_DOMAIN}/api/${API_VERSION}`,
+  baseURL: `https://${SHOPIFY_STORE_DOMAIN}/admin/api/${API_VERSION}`,
   headers: {
-    'X-Shopify-Storefront-Access-Token': STOREFRONT_ACCESS_TOKEN,
+    'X-Shopify-Access-Token': ADMIN_ACCESS_TOKEN,
     'Content-Type': 'application/json',
   },
 });
