@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { getShopifyProductsByCategory } from '../data/shopifyProducts';
+import { getShopifyProductsByCategory, getShopifyProducts } from '../data/shopifyProducts';
+import { getProductsByCollection } from '../data/shopifyCollections';
 import { ShoppingCart, Heart, Eye, Loader2 } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { useWishlist } from '../context/WishlistContext';
@@ -8,6 +9,7 @@ import { useCurrency } from '../context/CurrencyContext';
 import { useTranslation } from 'react-i18next';
 import { toast } from '../hooks/use-toast';
 import QuickViewModal from '../components/QuickViewModal';
+import CategoryFilter from '../components/CategoryFilter';
 import SEO from '../components/SEO';
 
 const CategoryPageNew = () => {
@@ -20,11 +22,24 @@ const CategoryPageNew = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [displayCount, setDisplayCount] = useState(20);
+  const [selectedFilter, setSelectedFilter] = useState('all');
 
   const title = useMemo(() => t(`category.${category}.title`), [category, t]);
   const description = useMemo(() => t(`category.${category}.desc`), [category, t]);
   
-  const displayedProducts = useMemo(() => products.slice(0, displayCount), [products, displayCount]);
+  const displayedProducts = useMemo(() => {
+    let filtered = products;
+    
+    // Filter by selected collection
+    if (selectedFilter !== 'all' && selectedFilter !== category) {
+      filtered = products.filter(p => {
+        // Check if product has this collection in its tags or is from specific collection
+        return p.tags?.some(tag => tag.toLowerCase().includes(selectedFilter.toLowerCase()));
+      });
+    }
+    
+    return filtered.slice(0, displayCount);
+  }, [products, displayCount, selectedFilter, category]);
 
   useEffect(() => {
     const loadProducts = async () => {
