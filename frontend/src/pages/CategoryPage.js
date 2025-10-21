@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getShopifyProductsByCategory } from '../data/shopifyProducts';
 import { ShoppingCart, Heart, Eye, Loader2 } from 'lucide-react';
@@ -20,8 +20,8 @@ const CategoryPageNew = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const title = t(`category.${category}.title`);
-  const description = t(`category.${category}.desc`);
+  const title = useMemo(() => t(`category.${category}.title`), [category, t]);
+  const description = useMemo(() => t(`category.${category}.desc`), [category, t]);
 
   useEffect(() => {
     const loadProducts = async () => {
