@@ -360,6 +360,13 @@ const resources = {
       'footer.newsletter.placeholder': 'Din e-post',
       'footer.newsletter.submit': 'Prenumerera',
       'footer.copyright': '© 2025 Bahne. Alla rättigheter förbehållna.',
+      
+      // Breadcrumbs
+      'breadcrumb.home': 'Hem',
+      'breadcrumb.categories': 'Kategorier',
+      'breadcrumb.product': 'Produkt',
+      'breadcrumb.wishlist': 'Önskelista',
+      'breadcrumb.cart': 'Varukorg',
     }
   },
   no: {
