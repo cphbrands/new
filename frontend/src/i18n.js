@@ -317,6 +317,8 @@ const resources = {
       'cart.title': 'Varukorg',
       'cart.continue': 'Fortsätt handla',
       'cart.checkout': 'Gå till kassan',
+      'cart.christmasGift': 'Detta är en julklapp',
+      'cart.christmasGift.info': 'Förlängd returpolicy gäller till januari 2026',
       
       'wishlist.title': 'Min Önskelista',
       
