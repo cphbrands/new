@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, Award, Globe, Leaf } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import SEO from '../components/SEO';
 
@@ -28,6 +28,10 @@ const Home = () => {
           </div>
           
           <div className="relative h-full flex flex-col items-center justify-center text-white p-8">
+            <div className="flex items-center gap-2 mb-3 text-sm opacity-90">
+              <Award className="w-4 h-4" />
+              <span>{t('home.nordic.quality')}</span>
+            </div>
             <h2 className="text-5xl md:text-7xl font-bold mb-4 text-center tracking-wide">
               {t('category.julepynt.title')}
             </h2>
@@ -56,6 +60,10 @@ const Home = () => {
           </div>
           
           <div className="relative h-full flex flex-col items-center justify-center text-white p-8">
+            <div className="flex items-center gap-2 mb-3 text-sm opacity-90">
+              <Award className="w-4 h-4" />
+              <span>{t('home.nordic.quality')}</span>
+            </div>
             <h2 className="text-5xl md:text-7xl font-bold mb-4 text-center tracking-wide">
               {t('category.gaver.title')}
             </h2>
@@ -68,6 +76,21 @@ const Home = () => {
             </div>
           </div>
         </Link>
+      </div>
+
+      {/* Nordic Quality Banner */}
+      <div className="bg-gradient-to-r from-zinc-50 to-zinc-100 py-12 border-y border-zinc-200">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <Award className="w-8 h-8 text-zinc-900" />
+            </div>
+            <h2 className="text-3xl font-bold mb-4">{t('home.nordic.title')}</h2>
+            <p className="text-lg text-zinc-700 leading-relaxed">
+              {t('home.nordic.description')}
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* Features Section */}
