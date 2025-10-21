@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
 
 const RecentlyViewedContext = createContext();
 
@@ -17,21 +17,27 @@ export const RecentlyViewedProvider = ({ children }) => {
   useEffect(() => {
     const saved = localStorage.getItem('bahne_recently_viewed');
     if (saved) {
-      setRecentlyViewed(JSON.parse(saved));
+      try {
+        setRecentlyViewed(JSON.parse(saved));
+      } catch (error) {
+        console.error('Error parsing recently viewed:', error);
+      }
     }
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('bahne_recently_viewed', JSON.stringify(recentlyViewed));
+    if (recentlyViewed.length > 0) {
+      localStorage.setItem('bahne_recently_viewed', JSON.stringify(recentlyViewed));
+    }
   }, [recentlyViewed]);
 
-  const addToRecentlyViewed = (product) => {
+  const addToRecentlyViewed = useCallback((product) => {
     setRecentlyViewed(prev => {
       const filtered = prev.filter(item => item.id !== product.id);
       const updated = [product, ...filtered].slice(0, MAX_ITEMS);
       return updated;
     });
-  };
+  }, []);
 
   return (
     <RecentlyViewedContext.Provider value={{ recentlyViewed, addToRecentlyViewed }}>
