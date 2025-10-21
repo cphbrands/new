@@ -48,6 +48,7 @@ const CategoryPageNew = () => {
     // Cleanup function
     return () => {
       setProducts([]);
+      setDisplayCount(20);
     };
   }, [category, t]);
 
