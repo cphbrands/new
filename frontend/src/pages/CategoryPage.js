@@ -165,6 +165,8 @@ const CategoryPageNew = () => {
             </div>
           ))}
         </div>
+          </>
+        )}
       </div>
 
       {/* Quick View Modal */}
