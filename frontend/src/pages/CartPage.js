@@ -131,6 +131,26 @@ const CartPage = () => {
                 {t('cart.checkout')}
               </button>
               
+              {/* Julegave Checkbox - Diskret */}
+              <div className="mb-4 p-3 bg-zinc-50 rounded-md border border-zinc-200">
+                <label className="flex items-start gap-2 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={isChristmasGift}
+                    onChange={(e) => setIsChristmasGift(e.target.checked)}
+                    className="mt-1 w-4 h-4 rounded border-zinc-300 text-zinc-900 focus:ring-zinc-900"
+                  />
+                  <div className="text-sm">
+                    <span className="text-zinc-700">{t('cart.christmasGift')}</span>
+                    {isChristmasGift && (
+                      <p className="text-xs text-zinc-500 mt-1">
+                        {t('cart.christmasGift.info')}
+                      </p>
+                    )}
+                  </div>
+                </label>
+              </div>
+              
               <Link
                 to="/"
                 className="block text-center text-zinc-600 hover:text-zinc-900 transition-colors"
