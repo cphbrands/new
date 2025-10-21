@@ -217,6 +217,10 @@ const resources = {
       'toast.newsletterSuccess': 'Thank you for subscribing!',
       'toast.newsletterDesc': 'You will now receive our newsletter.',
       
+      // Quick View
+      'quickview.title': 'Quick View',
+      'quickview.fullDetails': 'View full details',
+      
       // Breadcrumbs
       'breadcrumb.home': 'Home',
       'breadcrumb.categories': 'Categories',
