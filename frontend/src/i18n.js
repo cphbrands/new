@@ -401,6 +401,8 @@ const resources = {
       'cart.christmasGift.info': 'Utvidet returrett gjelder til januar 2026',
       
       'wishlist.title': 'Min Ønskeliste',
+      'wishlist.empty': 'Din ønskeliste er tom',
+      'wishlist.empty.desc': 'Du har ingen produkter i din ønskeliste. Legg til dine favoritter!',
       
       'common.new': 'Nyhet',
       'common.home': 'Hjem',
