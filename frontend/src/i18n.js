@@ -669,6 +669,9 @@ const resources = {
       'home.hero.explore': 'Explorer la collection',
       'home.hero.find': 'Trouvez le cadeau parfait',
       'home.giftcard': 'Carte cadeau',
+      'home.nordic.quality': 'Qualité Nordique',
+      'home.nordic.title': 'Excellence Scandinave - Qualité de Classe Mondiale',
+      'home.nordic.description': 'Design et artisanat nordiques soigneusement sélectionnés. Chaque produit est choisi avec soin pour garantir la plus haute qualité, des matériaux scandinaves authentiques et un design intemporel. Nous représentons le meilleur du mode de vie nordique.',
       
       'footer.shipping.fast': 'Livraison gratuite 2-5 jours',
       'footer.shipping.desc': 'Livraison rapide et sécurisée',
