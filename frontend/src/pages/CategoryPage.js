@@ -32,8 +32,8 @@ const CategoryPageNew = () => {
       } catch (error) {
         console.error('Error loading products:', error);
         toast({
-          title: "Fejl",
-          description: "Kunne ikke hente produkter. Prøv igen senere.",
+          title: t('common.error'),
+          description: t('category.loadError'),
           variant: "destructive"
         });
       } finally {
@@ -42,7 +42,11 @@ const CategoryPageNew = () => {
     };
 
     loadProducts();
-  }, [category]);
+    // Cleanup function
+    return () => {
+      setProducts([]);
+    };
+  }, [category, t]);
 
   const handleAddToCart = (e, product) => {
     e.preventDefault();
