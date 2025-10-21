@@ -775,6 +775,13 @@ const resources = {
       'footer.newsletter.placeholder': 'Tu email',
       'footer.newsletter.submit': 'Suscribirse',
       'footer.copyright': '© 2025 Bahne. Todos los derechos reservados.',
+      
+      // Breadcrumbs
+      'breadcrumb.home': 'Inicio',
+      'breadcrumb.categories': 'Categorías',
+      'breadcrumb.product': 'Producto',
+      'breadcrumb.wishlist': 'Lista de deseos',
+      'breadcrumb.cart': 'Carrito',
     }
   }
 };
