@@ -23,6 +23,7 @@ const resources = {
       'category.julepynt.desc': 'Fortryllende figurer, smukke dekorationer og alt det, der spreder julestemning',
       'category.gaver.title': 'Gaver',
       'category.gaver.desc': 'Mere end 10.000 gaveidéer til alle anledninger',
+      'category.all': 'Alle produkter',
       'category.products': 'produkter',
       'category.loading': 'Henter produkter...',
       'category.none': 'Ingen produkter fundet i denne kategori.',
