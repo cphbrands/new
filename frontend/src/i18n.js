@@ -108,6 +108,10 @@ const resources = {
       'toast.newsletterSuccess': 'Tak for din tilmelding!',
       'toast.newsletterDesc': 'Du vil nu modtage vores nyhedsbrev.',
       
+      // Quick View
+      'quickview.title': 'Hurtig visning',
+      'quickview.fullDetails': 'Se fulde detaljer',
+      
       // Breadcrumbs  
       'breadcrumb.home': 'Hjem',
       'breadcrumb.categories': 'Kategorier',
