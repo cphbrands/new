@@ -82,7 +82,7 @@ const QuickViewModal = ({ product, isOpen, onClose }) => {
               </div>
 
               <p className="text-zinc-600">
-                {product.description || `${t('product.from')} ${product.brand}`}
+                {product.description || `${t('quickview.quality')} ${product.brand}`}
               </p>
 
               {/* Quantity Selector */}
