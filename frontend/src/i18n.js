@@ -229,6 +229,7 @@ const resources = {
       // Quick View
       'quickview.title': 'Quick View',
       'quickview.fullDetails': 'View full details',
+      'quickview.quality': 'Quality product from',
       
       // Breadcrumbs
       'breadcrumb.home': 'Home',
