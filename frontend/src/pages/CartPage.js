@@ -11,6 +11,7 @@ const CartPage = () => {
   const { formatPrice } = useCurrency();
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const [isChristmasGift, setIsChristmasGift] = useState(false);
 
   const subtotal = getCartTotal();
   const shippingCost = 0; // Fri fragt altid
