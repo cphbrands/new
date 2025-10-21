@@ -670,6 +670,8 @@ const resources = {
       'cart.christmasGift.info': 'Política de devolución extendida aplicable hasta enero 2026',
       
       'wishlist.title': 'Mi lista de deseos',
+      'wishlist.empty': 'Tu lista de deseos está vacía',
+      'wishlist.empty.desc': '¡No tienes productos en tu lista de deseos. Añade tus favoritos!',
       
       'common.new': 'Nuevo',
       'common.home': 'Inicio',
