@@ -441,7 +441,7 @@ const resources = {
       'banner.return': '🎁 Retour prolongé pour les cadeaux de Noël',
       
       'category.julepynt.title': 'Décorations de Noël',
-      'category.julepynt.desc': 'Figurines enchanteresses, belles décorations et tout ce qui répand l\\'esprit de Noël',
+      'category.julepynt.desc': 'Figurines enchanteresses, belles décorations et tout ce qui répand l\'esprit de Noël',
       'category.gaver.title': 'Cadeaux',
       'category.gaver.desc': 'Plus de 10 000 idées de cadeaux pour toutes les occasions',
       'category.all': 'Tous les produits',
