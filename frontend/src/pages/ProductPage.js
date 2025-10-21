@@ -73,7 +73,7 @@ const ProductPage = () => {
     return (
       <div className="container mx-auto px-4 py-16 flex items-center justify-center">
         <Loader2 className="w-10 h-10 animate-spin text-zinc-400" />
-        <span className="ml-3 text-zinc-600">Henter produkt...</span>
+        <span className="ml-3 text-zinc-600">{t('common.loading')}</span>
       </div>
     );
   }
