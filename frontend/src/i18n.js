@@ -746,6 +746,12 @@ const resources = {
       'home.hero.find': 'Encuentra el regalo perfecto',
       'home.giftcard': 'Tarjeta regalo',
       
+      'home.hero.jul': 'Entra en un universo navideño mágico',
+      'home.hero.gaver': 'Más de 10.000 ideas de regalos',
+      'home.hero.explore': 'Explorar la colección',
+      'home.hero.find': 'Encuentra el regalo perfecto',
+      'home.giftcard': 'Tarjeta regalo',
+      
       'footer.shipping.fast': 'Envío gratis 2-5 días',
       'footer.shipping.desc': 'Entrega rápida y segura',
       'footer.payment': 'Pago seguro',
