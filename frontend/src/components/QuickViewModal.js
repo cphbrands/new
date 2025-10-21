@@ -113,7 +113,7 @@ const QuickViewModal = ({ product, isOpen, onClose }) => {
                   className="w-full bg-zinc-900 text-white py-3 rounded-md hover:bg-zinc-800 transition-colors disabled:bg-zinc-300 disabled:cursor-not-allowed flex items-center justify-center gap-2 font-medium"
                 >
                   <ShoppingCart className="w-5 h-5" />
-                  Tilføj til kurv
+                  {t('product.addToCart')}
                 </button>
 
                 <button
@@ -121,7 +121,7 @@ const QuickViewModal = ({ product, isOpen, onClose }) => {
                   className="w-full border border-zinc-300 py-3 rounded-md hover:bg-zinc-50 transition-colors flex items-center justify-center gap-2 font-medium"
                 >
                   <Heart className={`w-5 h-5 ${isInWishlist(product.id) ? 'fill-red-500 text-red-500' : ''}`} />
-                  {isInWishlist(product.id) ? 'Fjern fra ønskeliste' : 'Tilføj til ønskeliste'}
+                  {isInWishlist(product.id) ? t('product.removeFromWishlist') : t('product.addToWishlist')}
                 </button>
 
                 <Link
@@ -129,7 +129,7 @@ const QuickViewModal = ({ product, isOpen, onClose }) => {
                   onClick={onClose}
                   className="block text-center text-zinc-600 hover:text-zinc-900 transition-colors py-2"
                 >
-                  Se fulde detaljer
+                  {t('quickview.fullDetails')}
                 </Link>
               </div>
             </div>
