@@ -574,6 +574,14 @@ const resources = {
       'footer.payment.desc': '100% geschützte Transaktionen',
       'footer.return.extended': 'Verlängerte Rückgabe',
       'footer.return.desc': 'Weihnachtsgeschenke bis Januar 2026',
+      'footer.copyright': '© 2025 Bahne. Alle Rechte vorbehalten.',
+      
+      // Breadcrumbs
+      'breadcrumb.home': 'Startseite',
+      'breadcrumb.categories': 'Kategorien',
+      'breadcrumb.product': 'Produkt',
+      'breadcrumb.wishlist': 'Wunschliste',
+      'breadcrumb.cart': 'Warenkorb',
     }
   },
   fr: {
