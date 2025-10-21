@@ -178,6 +178,13 @@ const resources = {
       'common.products': 'products',
       'common.popularCategories': 'Popular categories',
       
+      // Toast messages
+      'toast.addedToCart': 'added to your cart',
+      'toast.addedToWishlist': 'Added to wishlist',
+      'toast.removedFromWishlist': 'Removed from wishlist',
+      'toast.newsletterSuccess': 'Thank you for subscribing!',
+      'toast.newsletterDesc': 'You will now receive our newsletter.',
+      
       // Breadcrumbs
       'breadcrumb.home': 'Home',
       'breadcrumb.categories': 'Categories',
