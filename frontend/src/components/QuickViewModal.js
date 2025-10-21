@@ -2,12 +2,16 @@ import React, { useState } from 'react';
 import { X, ShoppingCart, Heart, Minus, Plus } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { useWishlist } from '../context/WishlistContext';
+import { useCurrency } from '../context/CurrencyContext';
+import { useTranslation } from 'react-i18next';
 import { toast } from '../hooks/use-toast';
 import { Link } from 'react-router-dom';
 
 const QuickViewModal = ({ product, isOpen, onClose }) => {
   const { addToCart } = useCart();
   const { toggleWishlist, isInWishlist } = useWishlist();
+  const { formatPrice } = useCurrency();
+  const { t } = useTranslation();
   const [quantity, setQuantity] = useState(1);
 
   if (!isOpen || !product) return null;
@@ -17,8 +21,8 @@ const QuickViewModal = ({ product, isOpen, onClose }) => {
       addToCart(product);
     }
     toast({
-      title: "Tilføjet til kurv",
-      description: `${quantity} x ${product.name} er tilføjet til din kurv.`,
+      title: t('product.addToCart'),
+      description: `${quantity} x ${product.name} ${t('toast.addedToCart')}`,
     });
     onClose();
   };
@@ -26,10 +30,8 @@ const QuickViewModal = ({ product, isOpen, onClose }) => {
   const handleWishlistToggle = () => {
     toggleWishlist(product);
     toast({
-      title: isInWishlist(product.id) ? "Fjernet fra ønskeliste" : "Tilføjet til ønskeliste",
-      description: isInWishlist(product.id) 
-        ? `${product.name} er fjernet fra din ønskeliste.`
-        : `${product.name} er tilføjet til din ønskeliste.`,
+      title: isInWishlist(product.id) ? t('toast.removedFromWishlist') : t('toast.addedToWishlist'),
+      description: product.name,
     });
   };
 
