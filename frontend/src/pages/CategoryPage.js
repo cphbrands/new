@@ -115,6 +115,14 @@ const CategoryPageNew = () => {
           <p className="text-sm text-zinc-500 mt-4">{products.length} {t('common.products')}</p>
         </div>
 
+        {/* Category Filter */}
+        <div className="flex justify-center mb-8">
+          <CategoryFilter 
+            selectedCategory={selectedFilter} 
+            onCategoryChange={handleCategoryChange}
+          />
+        </div>
+
         {/* Loading State */}
         {loading ? (
           <div className="flex items-center justify-center py-20">
