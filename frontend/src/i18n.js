@@ -367,6 +367,25 @@ const resources = {
       'product.shipping.info': 'Fri frakt 2-5 virkedager',
       'product.related': 'Relaterte produkter',
       
+      // Sort
+      'sort.label': 'Sorter',
+      'sort.default': 'Standard',
+      'sort.newest': 'Nyeste først',
+      'sort.priceAsc': 'Pris: Lav til Høy',
+      'sort.priceDesc': 'Pris: Høy til Lav',
+      'sort.nameAsc': 'Navn: A-Å',
+      'sort.nameDesc': 'Navn: Å-A',
+      
+      // Quick View
+      'quickview.title': 'Rask visning',
+      'quickview.fullDetails': 'Se alle detaljer',
+      'quickview.quality': 'Kvalitetsprodukt fra',
+      
+      // Toast
+      'toast.addedToCart': 'lagt til i handlekurven',
+      'toast.addedToWishlist': 'Lagt til ønskelisten',
+      'toast.removedFromWishlist': 'Fjernet fra ønskelisten',
+      
       'cart.title': 'Handlekurv',
       'cart.continue': 'Fortsett å handle',
       'cart.checkout': 'Gå til kassen',
