@@ -86,8 +86,20 @@ const CategoryPageNew = () => {
           <p className="text-sm text-zinc-500 mt-4">{products.length} produkter</p>
         </div>
 
-        {/* Products Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {/* Loading State */}
+        {loading ? (
+          <div className="flex items-center justify-center py-20">
+            <Loader2 className="w-10 h-10 animate-spin text-zinc-400" />
+            <span className="ml-3 text-zinc-600">Henter produkter...</span>
+          </div>
+        ) : products.length === 0 ? (
+          <div className="text-center py-20">
+            <p className="text-xl text-zinc-600">Ingen produkter fundet i denne kategori.</p>
+          </div>
+        ) : (
+          <>
+            {/* Products Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {products.map(product => (
             <div key={product.id} className="group relative">
               <Link to={`/produkt/${product.id}`} className="block">
