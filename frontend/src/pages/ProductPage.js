@@ -14,17 +14,38 @@ const ProductPage = () => {
   const navigate = useNavigate();
   const { addToCart } = useCart();
   const { toggleWishlist, isInWishlist } = useWishlist();
-  const { recentlyViewed, addToRecentlyViewed } = useRecentlyViewed();
+  const { recentlyViewed, addToRecentlyViewed } = useRecentlyViewedContext();
   const [quantity, setQuantity] = useState(1);
   const [showShareMenu, setShowShareMenu] = useState(false);
-
-  const product = allProducts.find(p => p.id === id);
+  const [product, setProduct] = useState(null);
+  const [relatedProducts, setRelatedProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (product) {
-      addToRecentlyViewed(product);
-    }
-  }, [product, addToRecentlyViewed]);
+    const loadProduct = async () => {
+      setLoading(true);
+      try {
+        const productData = await getShopifyProductById(id);
+        if (productData) {
+          setProduct(productData);
+          addToRecentlyViewed(productData);
+          
+          // Load related products
+          const allProducts = await getShopifyProducts();
+          const related = allProducts
+            .filter(p => p.category === productData.category && p.id !== productData.id)
+            .slice(0, 4);
+          setRelatedProducts(related);
+        }
+      } catch (error) {
+        console.error('Error loading product:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadProduct();
+  }, [id, addToRecentlyViewed]);
 
   if (!product) {
     return (
