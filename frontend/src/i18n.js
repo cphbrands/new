@@ -87,6 +87,13 @@ const resources = {
       'common.products': 'produkter',
       'common.popularCategories': 'Populære kategorier',
       
+      // Toast messages
+      'toast.addedToCart': 'er tilføjet til din kurv',
+      'toast.addedToWishlist': 'Tilføjet til ønskeliste',
+      'toast.removedFromWishlist': 'Fjernet fra ønskeliste',
+      'toast.newsletterSuccess': 'Tak for din tilmelding!',
+      'toast.newsletterDesc': 'Du vil nu modtage vores nyhedsbrev.',
+      
       // Breadcrumbs  
       'breadcrumb.home': 'Hjem',
       'breadcrumb.categories': 'Kategorier',
