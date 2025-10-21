@@ -92,6 +92,13 @@ const resources = {
       'common.products': 'produkter',
       'common.popularCategories': 'Populære kategorier',
       
+      // Home
+      'home.hero.jul': 'Træd ind i et magisk juleunivers',
+      'home.hero.gaver': 'Mere end 10.000 gaveidéer',
+      'home.hero.explore': 'Udforsk kollektionen',
+      'home.hero.find': 'Find den perfekte gave',
+      'home.giftcard': 'Gavekort',
+      
       // Toast messages
       'toast.addedToCart': 'er tilføjet til din kurv',
       'toast.addedToWishlist': 'Tilføjet til ønskeliste',
