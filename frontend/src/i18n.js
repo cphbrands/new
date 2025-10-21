@@ -501,6 +501,25 @@ const resources = {
       'product.related': 'Produits connexes',
       'product.recentlyViewed': 'Produits récemment consultés',
       
+      // Sort
+      'sort.label': 'Trier par',
+      'sort.default': 'Défaut',
+      'sort.newest': 'Plus récent',
+      'sort.priceAsc': 'Prix: Bas à Élevé',
+      'sort.priceDesc': 'Prix: Élevé à Bas',
+      'sort.nameAsc': 'Nom: A-Z',
+      'sort.nameDesc': 'Nom: Z-A',
+      
+      // Quick View
+      'quickview.title': 'Aperçu rapide',
+      'quickview.fullDetails': 'Voir tous les détails',
+      'quickview.quality': 'Produit de qualité de',
+      
+      // Toast
+      'toast.addedToCart': 'ajouté à votre panier',
+      'toast.addedToWishlist': 'Ajouté à la liste de souhaits',
+      'toast.removedFromWishlist': 'Retiré de la liste de souhaits',
+      
       'cart.title': 'Panier',
       'cart.empty': 'Votre panier est vide',
       'cart.continue': 'Continuer vos achats',
