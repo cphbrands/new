@@ -656,6 +656,7 @@ const resources = {
       
       'cart.title': 'Carrito de compras',
       'cart.empty': 'Tu carrito está vacío',
+      'cart.empty.desc': '¡No tienes artículos en tu carrito. Comienza a comprar ahora!',
       'cart.continue': 'Continuar comprando',
       'cart.checkout': 'Proceder al pago',
       'cart.summary': 'Resumen del pedido',
