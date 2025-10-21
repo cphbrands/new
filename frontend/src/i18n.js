@@ -573,6 +573,8 @@ const resources = {
       'cart.shipping': 'Livraison',
       'cart.shippingFree': 'Gratuit',
       'cart.total': 'Total',
+      'cart.christmasGift': 'Ceci est un cadeau de Noël',
+      'cart.christmasGift.info': 'Politique de retour prolongée applicable jusqu\'en janvier 2026',
       
       'wishlist.title': 'Ma liste de souhaits',
       
