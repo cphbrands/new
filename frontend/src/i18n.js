@@ -64,6 +64,8 @@ const resources = {
       'cart.checkout': 'Gå til kassen',
       'cart.checkoutAlert': 'Checkout funktionalitet vil blive implementeret senere',
       'cart.summary': 'Ordre oversigt',
+      'cart.christmasGift': 'Dette er en julegave',
+      'cart.christmasGift.info': 'Udvidet returret gælder frem til januar 2026',
       
       // Wishlist
       'wishlist.title': 'Min Ønskeliste',
