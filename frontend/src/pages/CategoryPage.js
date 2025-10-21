@@ -23,6 +23,7 @@ const CategoryPageNew = () => {
   const [loading, setLoading] = useState(true);
   const [displayCount, setDisplayCount] = useState(20);
   const [selectedFilter, setSelectedFilter] = useState('all');
+  const [sortBy, setSortBy] = useState('default');
 
   const title = useMemo(() => t(`category.${category}.title`), [category, t]);
   const description = useMemo(() => t(`category.${category}.desc`), [category, t]);
@@ -33,13 +34,35 @@ const CategoryPageNew = () => {
     // Filter by selected collection
     if (selectedFilter !== 'all' && selectedFilter !== category) {
       filtered = products.filter(p => {
-        // Check if product has this collection in its tags or is from specific collection
         return p.tags?.some(tag => tag.toLowerCase().includes(selectedFilter.toLowerCase()));
       });
     }
     
-    return filtered.slice(0, displayCount);
-  }, [products, displayCount, selectedFilter, category]);
+    // Sort products
+    let sorted = [...filtered];
+    switch (sortBy) {
+      case 'price-asc':
+        sorted.sort((a, b) => a.price - b.price);
+        break;
+      case 'price-desc':
+        sorted.sort((a, b) => b.price - a.price);
+        break;
+      case 'name-asc':
+        sorted.sort((a, b) => a.name.localeCompare(b.name));
+        break;
+      case 'name-desc':
+        sorted.sort((a, b) => b.name.localeCompare(a.name));
+        break;
+      case 'newest':
+        sorted.sort((a, b) => (b.isNew ? 1 : 0) - (a.isNew ? 1 : 0));
+        break;
+      default:
+        // Keep original order
+        break;
+    }
+    
+    return sorted.slice(0, displayCount);
+  }, [products, displayCount, selectedFilter, category, sortBy]);
 
   useEffect(() => {
     const loadProducts = async () => {
