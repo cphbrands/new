@@ -582,6 +582,8 @@ const resources = {
       'cart.christmasGift.info': 'Politique de retour prolongée applicable jusqu\'en janvier 2026',
       
       'wishlist.title': 'Ma liste de souhaits',
+      'wishlist.empty': 'Votre liste de souhaits est vide',
+      'wishlist.empty.desc': 'Vous n\'avez aucun produit dans votre liste de souhaits. Ajoutez vos favoris!',
       
       'common.new': 'Nouveau',
       'common.home': 'Accueil',
