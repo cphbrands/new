@@ -397,6 +397,8 @@ const resources = {
       'toast.removedFromWishlist': 'Fjernet fra ønskelisten',
       
       'cart.title': 'Handlekurv',
+      'cart.empty': 'Din handlekurv er tom',
+      'cart.empty.desc': 'Du har ingen varer i handlekurven. Begynn å handle nå!',
       'cart.continue': 'Fortsett å handle',
       'cart.checkout': 'Gå til kassen',
       'cart.christmasGift': 'Dette er en julegave',
