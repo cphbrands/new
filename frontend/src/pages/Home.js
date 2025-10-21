@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <>
       <SEO />
-    <div className="min-h-screen">
+      <div className="min-h-screen">
       {/* Split Hero Section */}
       <div className="h-[calc(100vh-10rem)] flex flex-col md:flex-row">
         {/* Left Side - Jule Pynt */}
