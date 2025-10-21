@@ -405,9 +405,28 @@ const resources = {
       'product.shipping.info': 'Kostenloser Versand 2-5 Werktage',
       'product.shipping.delivery': 'Lieferung an Paketshop oder Hausadresse',
       'product.return': 'Rückgabe',
-      'product.return.info': 'Verlängerte Rückgabe für Weihnachtsgeschenke bis Januar 2026. 30 Tage Rückgaberecht auf alle Produkte.',
+      'product.return.info': 'Verlängerte Rückgabe für Weihnachtsgeschenke bis Januar 2026.',
       'product.related': 'Ähnliche Produkte',
       'product.recentlyViewed': 'Kürzlich angesehene Produkte',
+      
+      // Sort
+      'sort.label': 'Sortieren',
+      'sort.default': 'Standard',
+      'sort.newest': 'Neueste zuerst',
+      'sort.priceAsc': 'Preis: Niedrig bis Hoch',
+      'sort.priceDesc': 'Preis: Hoch bis Niedrig',
+      'sort.nameAsc': 'Name: A-Z',
+      'sort.nameDesc': 'Name: Z-A',
+      
+      // Quick View
+      'quickview.title': 'Schnellansicht',
+      'quickview.fullDetails': 'Vollständige Details anzeigen',
+      'quickview.quality': 'Qualitätsprodukt von',
+      
+      // Toast
+      'toast.addedToCart': 'zum Warenkorb hinzugefügt',
+      'toast.addedToWishlist': 'Zur Wunschliste hinzugefügt',
+      'toast.removedFromWishlist': 'Von der Wunschliste entfernt',
       
       'cart.title': 'Warenkorb',
       'cart.empty': 'Ihr Warenkorb ist leer',
