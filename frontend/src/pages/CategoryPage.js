@@ -64,8 +64,14 @@ const CategoryPageNew = () => {
     return () => {
       setProducts([]);
       setDisplayCount(20);
+      setSelectedFilter('all');
     };
   }, [category, t]);
+  
+  const handleCategoryChange = (newCategory) => {
+    setSelectedFilter(newCategory);
+    setDisplayCount(20); // Reset pagination when changing filter
+  };
 
   const handleAddToCart = (e, product) => {
     e.preventDefault();
