@@ -235,6 +235,15 @@ const resources = {
       'toast.newsletterSuccess': 'Thank you for subscribing!',
       'toast.newsletterDesc': 'You will now receive our newsletter.',
       
+      // Sort
+      'sort.label': 'Sort by',
+      'sort.default': 'Default',
+      'sort.newest': 'Newest first',
+      'sort.priceAsc': 'Price: Low to High',
+      'sort.priceDesc': 'Price: High to Low',
+      'sort.nameAsc': 'Name: A-Z',
+      'sort.nameDesc': 'Name: Z-A',
+      
       // Quick View
       'quickview.title': 'Quick View',
       'quickview.fullDetails': 'View full details',
