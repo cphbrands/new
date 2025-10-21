@@ -26,6 +26,9 @@ const resources = {
       'category.products': 'produkter',
       'category.loading': 'Henter produkter...',
       'category.none': 'Ingen produkter fundet i denne kategori.',
+      'category.loadError': 'Kunne ikke hente produkter. Prøv igen senere.',
+      'category.loadMore': 'Vis flere produkter',
+      'category.remaining': 'tilbage',
       
       // Product
       'product.brand': 'Mærke',
