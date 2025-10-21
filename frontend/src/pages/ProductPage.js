@@ -54,13 +54,13 @@ const ProductPage = () => {
   if (!product) {
     return (
       <div className="container mx-auto px-4 py-16 text-center">
-        <h2 className="text-2xl font-bold mb-4">Produkt ikke fundet</h2>
+        <h2 className="text-2xl font-bold mb-4">{t('product.notFound')}</h2>
         <button
           onClick={() => navigate('/')}
           className="text-zinc-600 hover:text-zinc-900 flex items-center gap-2 mx-auto"
         >
           <ChevronLeft className="w-4 h-4" />
-          Tilbage til forsiden
+          {t('product.back')}
         </button>
       </div>
     );
