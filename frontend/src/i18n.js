@@ -434,8 +434,21 @@ const resources = {
       'home.giftcard': 'Gavekort',
       
       'footer.shipping.fast': 'Fri frakt 2-5 dager',
+      'footer.shipping.desc': 'Rask og sikker levering',
       'footer.payment': 'Sikker betaling',
+      'footer.payment.desc': '100% beskyttede transaksjoner',
       'footer.return.extended': 'Utvidet retur',
+      'footer.return.desc': 'Julegaver til januar 2026',
+      'footer.about': 'Om Bahne',
+      'footer.about.desc': 'Vi er ikke en kjede. Vi er en familie av butikker med plass til kundeopplevelser, entusiasme og et utvalg skapt ut fra det vi liker.',
+      'footer.help': 'Hjelp',
+      'footer.shop': 'Handle',
+      'footer.contact': 'Kontakt',
+      'footer.newsletter': 'Nyhetsbrev',
+      'footer.newsletter.desc': 'Få eksklusive tilbud og nyheter direkte i innboksen din.',
+      'footer.newsletter.placeholder': 'Din e-post',
+      'footer.newsletter.submit': 'Abonner',
+      'footer.copyright': '© 2025 Bahne. Alle rettigheter forbeholdt.',
     }
   },
   de: {
