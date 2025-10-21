@@ -1,19 +1,21 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Breadcrumbs = () => {
   const location = useLocation();
+  const { t } = useTranslation();
   const pathnames = location.pathname.split('/').filter(x => x);
 
   const breadcrumbNameMap = {
-    'kategori': 'Kategorier',
-    'julepynt': 'Jule Pynt',
-    'gaver': 'Gaver',
-    'produkt': 'Produkt',
-    'kurv': 'Indkøbskurv',
-    'onskeliste': 'Ønskeliste',
-    'nyheder': 'Nyheder'
+    'kategori': t('breadcrumb.categories'),
+    'julepynt': t('category.julepynt.title'),
+    'gaver': t('category.gaver.title'),
+    'produkt': t('breadcrumb.product'),
+    'kurv': t('breadcrumb.cart'),
+    'onskeliste': t('breadcrumb.wishlist'),
+    'nyheder': t('nav.nyheder')
   };
 
   if (pathnames.length === 0) return null;
@@ -24,7 +26,7 @@ const Breadcrumbs = () => {
         <ol className="flex items-center gap-2 text-sm">
           <li>
             <Link to="/" className="text-zinc-600 hover:text-zinc-900 transition-colors">
-              Hjem
+              {t('breadcrumb.home')}
             </Link>
           </li>
           {pathnames.map((name, index) => {
