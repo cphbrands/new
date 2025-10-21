@@ -157,6 +157,7 @@ const resources = {
       'cart.shippingFree': 'Free',
       'cart.total': 'Total',
       'cart.checkout': 'Proceed to checkout',
+      'cart.checkoutAlert': 'Checkout functionality will be implemented later',
       'cart.summary': 'Order summary',
       
       'wishlist.title': 'My Wishlist',
