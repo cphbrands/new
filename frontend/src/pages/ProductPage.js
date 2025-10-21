@@ -5,6 +5,8 @@ import { ShoppingCart, Heart, ChevronLeft, Share2, Loader2 } from 'lucide-react'
 import { useCart } from '../context/CartContext';
 import { useWishlist } from '../context/WishlistContext';
 import { useRecentlyViewed } from '../context/RecentlyViewedContext';
+import { useCurrency } from '../context/CurrencyContext';
+import { useTranslation } from 'react-i18next';
 import { toast } from '../hooks/use-toast';
 import { FacebookShareButton, TwitterShareButton, WhatsappShareButton, FacebookIcon, TwitterIcon, WhatsappIcon } from 'react-share';
 import SEO from '../components/SEO';
@@ -15,6 +17,8 @@ const ProductPage = () => {
   const { addToCart } = useCart();
   const { toggleWishlist, isInWishlist } = useWishlist();
   const { recentlyViewed, addToRecentlyViewed } = useRecentlyViewed();
+  const { formatPrice } = useCurrency();
+  const { t } = useTranslation();
   const [quantity, setQuantity] = useState(1);
   const [showShareMenu, setShowShareMenu] = useState(false);
   const [product, setProduct] = useState(null);
