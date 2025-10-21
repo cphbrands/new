@@ -19,9 +19,12 @@ const CategoryPageNew = () => {
   const [quickViewProduct, setQuickViewProduct] = useState(null);
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [displayCount, setDisplayCount] = useState(20);
 
   const title = useMemo(() => t(`category.${category}.title`), [category, t]);
   const description = useMemo(() => t(`category.${category}.desc`), [category, t]);
+  
+  const displayedProducts = useMemo(() => products.slice(0, displayCount), [products, displayCount]);
 
   useEffect(() => {
     const loadProducts = async () => {
