@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const Home = () => {
   return (
+    <>
+      <SEO />
     <div className="min-h-screen">
       {/* Split Hero Section */}
       <div className="h-[calc(100vh-10rem)] flex flex-col md:flex-row">
