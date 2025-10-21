@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import SEO from '../components/SEO';
 
 const Home = () => {
+  const { t } = useTranslation();
+  
   return (
     <>
       <SEO />
@@ -26,13 +29,13 @@ const Home = () => {
           
           <div className="relative h-full flex flex-col items-center justify-center text-white p-8">
             <h2 className="text-5xl md:text-7xl font-bold mb-4 text-center tracking-wide">
-              Jule Pynt
+              {t('category.julepynt.title')}
             </h2>
             <p className="text-xl md:text-2xl mb-8 text-center opacity-90">
-              Træd ind i et magisk juleunivers
+              {t('home.hero.jul')}
             </p>
             <div className="flex items-center gap-2 text-lg font-medium group-hover:gap-4 transition-all">
-              <span>Udforsk kollektionen</span>
+              <span>{t('home.hero.explore')}</span>
               <ChevronRight className="w-5 h-5" />
             </div>
           </div>
@@ -54,13 +57,13 @@ const Home = () => {
           
           <div className="relative h-full flex flex-col items-center justify-center text-white p-8">
             <h2 className="text-5xl md:text-7xl font-bold mb-4 text-center tracking-wide">
-              Gaver
+              {t('category.gaver.title')}
             </h2>
             <p className="text-xl md:text-2xl mb-8 text-center opacity-90">
-              Mere end 10.000 gaveidéer
+              {t('home.hero.gaver')}
             </p>
             <div className="flex items-center gap-2 text-lg font-medium group-hover:gap-4 transition-all">
-              <span>Find den perfekte gave</span>
+              <span>{t('home.hero.find')}</span>
               <ChevronRight className="w-5 h-5" />
             </div>
           </div>
