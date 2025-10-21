@@ -58,6 +58,7 @@ const resources = {
       'cart.shippingFree': 'Gratis',
       'cart.total': 'Total',
       'cart.checkout': 'Gå til kassen',
+      'cart.checkoutAlert': 'Checkout funktionalitet vil blive implementeret senere',
       'cart.summary': 'Ordre oversigt',
       
       // Wishlist
