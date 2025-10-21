@@ -113,7 +113,7 @@ const CategoryPageNew = () => {
                   {/* Stock Badge */}
                   <div className="absolute top-2 left-2 bg-white px-2 py-1 rounded text-xs font-medium flex items-center gap-1">
                     <div className={`w-2 h-2 rounded-full ${product.inStock ? 'bg-green-500' : 'bg-red-500'}`} />
-                    {product.inStock ? 'På lager' : 'Udsolgt'}
+                    {product.inStock ? t('product.inStock') : t('product.outOfStock')}
                   </div>
 
                   {/* Quick Actions - Show on Hover */}
