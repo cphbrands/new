@@ -14,7 +14,12 @@ const CartPage = () => {
 
   if (cart.length === 0) {
     return (
-      <div className="container mx-auto px-4 py-16">
+      <>
+        <SEO
+          title="Indkøbskurv | Bahne"
+          description="Din indkøbskurv"
+        />
+        <div className="container mx-auto px-4 py-16">
         <div className="max-w-md mx-auto text-center">
           <ShoppingBag className="w-16 h-16 mx-auto mb-4 text-zinc-400" />
           <h2 className="text-2xl font-bold mb-4">Din kurv er tom</h2>
