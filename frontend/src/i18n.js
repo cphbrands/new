@@ -343,12 +343,9 @@ const resources = {
       'home.hero.explore': 'Utforska kollektionen',
       'home.hero.find': 'Hitta den perfekta presenten',
       'home.giftcard': 'Presentkort',
-      
-      'home.hero.jul': 'Kliv in i ett magiskt juluniversum',
-      'home.hero.gaver': 'Mer än 10 000 presentidéer',
-      'home.hero.explore': 'Utforska kollektionen',
-      'home.hero.find': 'Hitta den perfekta presenten',
-      'home.giftcard': 'Presentkort',
+      'home.nordic.quality': 'Nordisk Kvalitet',
+      'home.nordic.title': 'Skandinavisk Excellens - Kvalitet i Världsklass',
+      'home.nordic.description': 'Handplockad nordisk design och hantverk. Varje produkt är noggrant utvald för att säkerställa högsta kvalitet, äkta skandinaviska material och tidlös design. Vi representerar det allra bästa av nordisk livsstil.',
       
       'footer.shipping.fast': 'Fri frakt 2-5 dagar',
       'footer.shipping.desc': 'Snabb och säker leverans',
