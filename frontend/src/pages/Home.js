@@ -70,26 +70,21 @@ const Home = () => {
       {/* Features Section */}
       <div className="bg-white py-8 border-y border-zinc-200">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="space-y-2">
               <div className="text-2xl">📦</div>
-              <h3 className="font-semibold">Levering 1-3 hverdage</h3>
-              <p className="text-sm text-zinc-600">Bestil inden kl. 14.00</p>
+              <h3 className="font-semibold">Fri Levering 2-5 hverdage</h3>
+              <p className="text-sm text-zinc-600">Hurtig og sikker levering</p>
             </div>
             <div className="space-y-2">
-              <div className="text-2xl">🏪</div>
-              <h3 className="font-semibold">Click & Collect</h3>
-              <p className="text-sm text-zinc-600">Gratis afhentning efter 2 timer</p>
+              <div className="text-2xl">🛡️</div>
+              <h3 className="font-semibold">Sikker betaling</h3>
+              <p className="text-sm text-zinc-600">100% beskyttede transaktioner</p>
             </div>
             <div className="space-y-2">
               <div className="text-2xl">🎁</div>
-              <h3 className="font-semibold">Bytteregler for julegaver</h3>
-              <p className="text-sm text-zinc-600">Udvidet retur frem til januar 2026</p>
-            </div>
-            <div className="space-y-2">
-              <div className="text-2xl">✨</div>
-              <h3 className="font-semibold">Fri fragt</h3>
-              <p className="text-sm text-zinc-600">Ved køb over 499 kr.</p>
+              <h3 className="font-semibold">Udvidet retur</h3>
+              <p className="text-sm text-zinc-600">Julegaver frem til januar 2026</p>
             </div>
           </div>
         </div>
