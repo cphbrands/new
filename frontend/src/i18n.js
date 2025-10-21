@@ -479,6 +479,8 @@ const resources = {
       'cart.shipping': 'Versand',
       'cart.shippingFree': 'Kostenlos',
       'cart.total': 'Gesamt',
+      'cart.christmasGift': 'Dies ist ein Weihnachtsgeschenk',
+      'cart.christmasGift.info': 'Verlängerte Rückgabefrist gilt bis Januar 2026',
       
       'wishlist.title': 'Meine Wunschliste',
       
