@@ -62,9 +62,17 @@ const ProductPage = () => {
     );
   }
 
-  const relatedProducts = allProducts.filter(p => p.category === product.category && p.id !== product.id).slice(0, 4);
-  const recentlyViewedFiltered = recentlyViewed.filter(p => p.id !== product.id).slice(0, 4);
+  const recentlyViewedFiltered = recentlyViewed.filter(p => p.id !== id).slice(0, 4);
   const shareUrl = window.location.href;
+
+  if (loading) {
+    return (
+      <div className="container mx-auto px-4 py-16 flex items-center justify-center">
+        <Loader2 className="w-10 h-10 animate-spin text-zinc-400" />
+        <span className="ml-3 text-zinc-600">Henter produkt...</span>
+      </div>
+    );
+  }
 
   const handleAddToCart = () => {
     for (let i = 0; i < quantity; i++) {
