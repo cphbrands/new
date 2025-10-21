@@ -112,6 +112,15 @@ const resources = {
       'toast.newsletterSuccess': 'Tak for din tilmelding!',
       'toast.newsletterDesc': 'Du vil nu modtage vores nyhedsbrev.',
       
+      // Sort
+      'sort.label': 'Sorter',
+      'sort.default': 'Standard',
+      'sort.newest': 'Nyeste først',
+      'sort.priceAsc': 'Pris: Lav til høj',
+      'sort.priceDesc': 'Pris: Høj til lav',
+      'sort.nameAsc': 'Navn: A-Å',
+      'sort.nameDesc': 'Navn: Å-A',
+      
       // Quick View
       'quickview.title': 'Hurtig visning',
       'quickview.fullDetails': 'Se fulde detaljer',
