@@ -468,6 +468,13 @@ const resources = {
       'footer.newsletter.placeholder': 'Din e-post',
       'footer.newsletter.submit': 'Abonner',
       'footer.copyright': '© 2025 Bahne. Alle rettigheter forbeholdt.',
+      
+      // Breadcrumbs
+      'breadcrumb.home': 'Hjem',
+      'breadcrumb.categories': 'Kategorier',
+      'breadcrumb.product': 'Produkt',
+      'breadcrumb.wishlist': 'Ønskeliste',
+      'breadcrumb.cart': 'Handlekurv',
     }
   },
   de: {
