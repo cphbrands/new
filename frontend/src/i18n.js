@@ -143,6 +143,9 @@ const resources = {
       'category.products': 'products',
       'category.loading': 'Loading products...',
       'category.none': 'No products found in this category.',
+      'category.loadError': 'Could not load products. Please try again later.',
+      'category.loadMore': 'Load more products',
+      'category.remaining': 'remaining',
       
       'product.brand': 'Brand',
       'product.inStock': 'In stock - Ready for delivery',
