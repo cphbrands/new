@@ -584,6 +584,25 @@ const resources = {
       'product.related': 'Productos relacionados',
       'product.recentlyViewed': 'Productos vistos recientemente',
       
+      // Sort
+      'sort.label': 'Ordenar por',
+      'sort.default': 'Predeterminado',
+      'sort.newest': 'Más reciente',
+      'sort.priceAsc': 'Precio: Bajo a Alto',
+      'sort.priceDesc': 'Precio: Alto a Bajo',
+      'sort.nameAsc': 'Nombre: A-Z',
+      'sort.nameDesc': 'Nombre: Z-A',
+      
+      // Quick View
+      'quickview.title': 'Vista rápida',
+      'quickview.fullDetails': 'Ver detalles completos',
+      'quickview.quality': 'Producto de calidad de',
+      
+      // Toast
+      'toast.addedToCart': 'añadido a tu carrito',
+      'toast.addedToWishlist': 'Añadido a la lista de deseos',
+      'toast.removedFromWishlist': 'Eliminado de la lista de deseos',
+      
       'cart.title': 'Carrito de compras',
       'cart.empty': 'Tu carrito está vacío',
       'cart.continue': 'Continuar comprando',
