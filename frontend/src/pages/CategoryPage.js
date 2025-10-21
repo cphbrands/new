@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { julepyntProducts, gaverProducts } from '../data/mockProducts';
-import { ShoppingCart, Heart, Eye } from 'lucide-react';
+import { getShopifyProductsByCategory } from '../data/shopifyProducts';
+import { ShoppingCart, Heart, Eye, Loader2 } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { useWishlist } from '../context/WishlistContext';
 import { toast } from '../hooks/use-toast';
@@ -13,12 +13,34 @@ const CategoryPageNew = () => {
   const { addToCart } = useCart();
   const { toggleWishlist, isInWishlist } = useWishlist();
   const [quickViewProduct, setQuickViewProduct] = useState(null);
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  const products = category === 'julepynt' ? julepyntProducts : gaverProducts;
   const title = category === 'julepynt' ? 'Jule Pynt' : 'Gaver';
   const description = category === 'julepynt' 
     ? 'Fortryllende figurer, smukke dekorationer og alt det, der spreder julestemning'
     : 'Mere end 10.000 gaveidéer til alle anledninger';
+
+  useEffect(() => {
+    const loadProducts = async () => {
+      setLoading(true);
+      try {
+        const shopifyProducts = await getShopifyProductsByCategory(category);
+        setProducts(shopifyProducts);
+      } catch (error) {
+        console.error('Error loading products:', error);
+        toast({
+          title: "Fejl",
+          description: "Kunne ikke hente produkter. Prøv igen senere.",
+          variant: "destructive"
+        });
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadProducts();
+  }, [category]);
 
   const handleAddToCart = (e, product) => {
     e.preventDefault();
