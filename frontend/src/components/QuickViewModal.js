@@ -42,7 +42,7 @@ const QuickViewModal = ({ product, isOpen, onClose }) => {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="sticky top-0 bg-white border-b border-zinc-200 px-6 py-4 flex items-center justify-between z-10">
-          <h2 className="text-lg font-semibold">Hurtig visning</h2>
+          <h2 className="text-lg font-semibold">{t('quickview.title')}</h2>
           <button onClick={onClose} className="text-zinc-400 hover:text-zinc-900 transition-colors">
             <X className="w-6 h-6" />
           </button>
@@ -63,31 +63,31 @@ const QuickViewModal = ({ product, isOpen, onClose }) => {
             <div className="space-y-4">
               {product.isNew && (
                 <span className="inline-block bg-zinc-900 text-white text-xs px-3 py-1 rounded">
-                  Nyhed
+                  {t('common.new')}
                 </span>
               )}
               
               <div>
                 <p className="text-zinc-600 mb-1">{product.brand}</p>
                 <h3 className="text-2xl font-bold mb-2">{product.name}</h3>
-                <p className="text-2xl font-bold">{product.price.toFixed(2)} kr.</p>
+                <p className="text-2xl font-bold">{formatPrice(product.price)}</p>
               </div>
 
               {/* Stock Status */}
               <div className="flex items-center gap-2">
                 <div className={`w-2 h-2 rounded-full ${product.inStock ? 'bg-green-500' : 'bg-red-500'}`} />
                 <span className="text-sm text-zinc-600">
-                  {product.inStock ? 'På lager' : 'Udsolgt'}
+                  {product.inStock ? t('product.inStock') : t('product.outOfStock')}
                 </span>
               </div>
 
               <p className="text-zinc-600">
-                Et smukt og eksklusivt produkt fra {product.brand}. Perfekt til at skabe hygge og stemning i dit hjem.
+                {product.description || `${t('product.from')} ${product.brand}`}
               </p>
 
               {/* Quantity Selector */}
               <div>
-                <label className="block text-sm font-medium mb-2">Antal</label>
+                <label className="block text-sm font-medium mb-2">{t('product.quantity')}</label>
                 <div className="flex items-center gap-3">
                   <button
                     onClick={() => setQuantity(Math.max(1, quantity - 1))}
