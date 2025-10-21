@@ -177,6 +177,7 @@ const resources = {
       'footer.about.desc': 'We are not a chain. We are a family of stores with room for customer experiences, enthusiasm and a selection created from what we like.',
       'footer.help': 'Help',
       'footer.shop': 'Shop',
+      'footer.contact': 'Contact',
       'footer.newsletter': 'Newsletter',
       'footer.newsletter.desc': 'Get exclusive offers and news directly in your inbox.',
       'footer.newsletter.placeholder': 'Your email',
@@ -187,6 +188,7 @@ const resources = {
       'footer.payment.desc': '100% protected transactions',
       'footer.return.extended': 'Extended returns',
       'footer.return.desc': 'Christmas gifts until January 2026',
+      'footer.copyright': '© 2025 Bahne. All rights reserved.',
       
       'common.new': 'New',
       'common.loading': 'Loading...',
