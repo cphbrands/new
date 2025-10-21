@@ -4,6 +4,8 @@ import { getShopifyProductsByCategory } from '../data/shopifyProducts';
 import { ShoppingCart, Heart, Eye, Loader2 } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { useWishlist } from '../context/WishlistContext';
+import { useCurrency } from '../context/CurrencyContext';
+import { useTranslation } from 'react-i18next';
 import { toast } from '../hooks/use-toast';
 import QuickViewModal from '../components/QuickViewModal';
 import SEO from '../components/SEO';
@@ -12,14 +14,14 @@ const CategoryPageNew = () => {
   const { category } = useParams();
   const { addToCart } = useCart();
   const { toggleWishlist, isInWishlist } = useWishlist();
+  const { formatPrice } = useCurrency();
+  const { t } = useTranslation();
   const [quickViewProduct, setQuickViewProduct] = useState(null);
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const title = category === 'julepynt' ? 'Jule Pynt' : 'Gaver';
-  const description = category === 'julepynt' 
-    ? 'Fortryllende figurer, smukke dekorationer og alt det, der spreder julestemning'
-    : 'Mere end 10.000 gaveidéer til alle anledninger';
+  const title = t(`category.${category}.title`);
+  const description = t(`category.${category}.desc`);
 
   useEffect(() => {
     const loadProducts = async () => {
