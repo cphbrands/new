@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { ShoppingCart, Search, Menu, X, User, MapPin } from 'lucide-react';
+import { ShoppingCart, Search, Menu, X, User, MapPin, Heart } from 'lucide-react';
 import { useCart } from '../context/CartContext';
+import { useWishlist } from '../context/WishlistContext';
 
 const Navbar = () => {
   const { getCartCount } = useCart();
+  const { getWishlistCount } = useWishlist();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const navigate = useNavigate();
@@ -22,8 +24,8 @@ const Navbar = () => {
       <div className="bg-zinc-900 text-white text-sm py-2">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center gap-8 overflow-x-auto">
-            <span className="whitespace-nowrap">✨ Fri fragt over 499 kr.</span>
-            <span className="whitespace-nowrap">📦 Levering 1-3 hverdage</span>
+            <span className="whitespace-nowrap">🎄 Glædelig Jul</span>
+            <span className="whitespace-nowrap">📦 Fri Levering 2-5 hverdage</span>
             <span className="whitespace-nowrap">🏪 Click & Collect</span>
             <span className="whitespace-nowrap">🎁 Udvidet retur for julegaver</span>
           </div>
