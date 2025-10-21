@@ -105,7 +105,7 @@ const Home = () => {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
             </div>
-            <h3 className="font-medium text-center">Jule Pynt</h3>
+            <h3 className="font-medium text-center">{t('category.julepynt.title')}</h3>
           </Link>
           <Link to="/kategori/gaver" className="group">
             <div className="aspect-square overflow-hidden rounded-lg mb-3">
@@ -115,7 +115,7 @@ const Home = () => {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
             </div>
-            <h3 className="font-medium text-center">Gaver</h3>
+            <h3 className="font-medium text-center">{t('category.gaver.title')}</h3>
           </Link>
           <Link to="/nyheder" className="group">
             <div className="aspect-square overflow-hidden rounded-lg mb-3">
@@ -125,7 +125,7 @@ const Home = () => {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
             </div>
-            <h3 className="font-medium text-center">Nyheder</h3>
+            <h3 className="font-medium text-center">{t('nav.nyheder')}</h3>
           </Link>
           <Link to="/gavekort" className="group">
             <div className="aspect-square overflow-hidden rounded-lg mb-3">
@@ -135,7 +135,7 @@ const Home = () => {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
             </div>
-            <h3 className="font-medium text-center">Gavekort</h3>
+            <h3 className="font-medium text-center">{t('home.giftcard')}</h3>
           </Link>
         </div>
       </div>
