@@ -142,11 +142,7 @@ const CartPage = () => {
               <div className="mt-6 pt-6 border-t border-zinc-300 space-y-3 text-sm text-zinc-600">
                 <p className="flex items-start gap-2">
                   <span>✓</span>
-                  <span>Levering 1-3 hverdage</span>
-                </p>
-                <p className="flex items-start gap-2">
-                  <span>✓</span>
-                  <span>Click & Collect gratis afhentning</span>
+                  <span>Fri levering 2-5 hverdage</span>
                 </p>
                 <p className="flex items-start gap-2">
                   <span>✓</span>
