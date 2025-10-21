@@ -71,6 +71,7 @@ const resources = {
       'footer.about.desc': 'Vi er ikke en kæde. Vi er en familie af butikker med plads til kundeoplevelser, begejstring og et udvalg skabt ud fra det, vi selv kan lide.',
       'footer.help': 'Hjælp',
       'footer.shop': 'Shop',
+      'footer.contact': 'Kontakt',
       'footer.newsletter': 'Nyhedsbrev',
       'footer.newsletter.desc': 'Få ekslusive tilbud og nyheder direkte i din indbakke.',
       'footer.newsletter.placeholder': 'Din email',
@@ -81,6 +82,7 @@ const resources = {
       'footer.payment.desc': '100% beskyttede transaktioner',
       'footer.return.extended': 'Udvidet retur',
       'footer.return.desc': 'Julegaver frem til januar 2026',
+      'footer.copyright': '© 2025 Bahne. Alle rettigheder forbeholdes.',
       
       // Common
       'common.new': 'Nyhed',
