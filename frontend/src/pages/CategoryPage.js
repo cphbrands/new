@@ -31,10 +31,6 @@ const CategoryPageNew = () => {
   const description = useMemo(() => t(`category.${category}.desc`), [category, t]);
   
   const { displayedProducts, filteredCount } = useMemo(() => {
-    console.log('=== FILTER DEBUG ===');
-    console.log('Selected filter:', selectedFilter);
-    console.log('All products count:', allProducts.length);
-    
     let filtered = allProducts;
     
     // Filter by selected collection - only if not "all"
@@ -51,8 +47,6 @@ const CategoryPageNew = () => {
         
         return hasMatch;
       });
-      
-      console.log('Filtered to:', filtered.length, 'products');
     }
     
     // Sort products
@@ -79,7 +73,6 @@ const CategoryPageNew = () => {
     }
     
     const displayed = sorted.slice(0, displayCount);
-    console.log('Final displayed:', displayed.length);
     
     return {
       displayedProducts: displayed,
