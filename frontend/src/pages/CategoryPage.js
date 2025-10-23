@@ -31,10 +31,15 @@ const CategoryPageNew = () => {
   const displayedProducts = useMemo(() => {
     let filtered = products;
     
-    // Filter by selected collection
-    if (selectedFilter !== 'all' && selectedFilter !== category) {
+    // Filter by selected collection - only if not "all"
+    if (selectedFilter !== 'all') {
       filtered = products.filter(p => {
-        return p.tags?.some(tag => tag.toLowerCase().includes(selectedFilter.toLowerCase()));
+        // Check if product has this collection in its tags
+        return p.tags?.some(tag => {
+          const tagLower = tag.toLowerCase();
+          const filterLower = selectedFilter.toLowerCase();
+          return tagLower.includes(filterLower) || filterLower.includes(tagLower);
+        });
       });
     }
     
@@ -62,7 +67,7 @@ const CategoryPageNew = () => {
     }
     
     return sorted.slice(0, displayCount);
-  }, [products, displayCount, selectedFilter, category, sortBy]);
+  }, [products, displayCount, selectedFilter, sortBy]);
 
   useEffect(() => {
     const loadProducts = async () => {
