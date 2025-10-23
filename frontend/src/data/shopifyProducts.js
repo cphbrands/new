@@ -2,10 +2,16 @@ import { shopifyService } from '../services/shopifyService';
 
 let cachedProducts = null;
 let cacheTimestamp = null;
-const CACHE_DURATION = 10 * 60 * 1000; // 10 minutes (øget fra 5)
+const CACHE_DURATION = 10 * 60 * 1000; // 10 minutes
 let pendingRequest = null; // Prevent duplicate requests
 
-export const getShopifyProducts = async () => {
+export const getShopifyProducts = async (forceRefresh = false) => {
+  // Clear cache if force refresh
+  if (forceRefresh) {
+    cachedProducts = null;
+    cacheTimestamp = null;
+  }
+  
   // Return cached data if still valid
   if (cachedProducts && cacheTimestamp && (Date.now() - cacheTimestamp < CACHE_DURATION)) {
     return cachedProducts;
