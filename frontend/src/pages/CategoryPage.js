@@ -102,6 +102,9 @@ const CategoryPageNew = () => {
   const handleCategoryChange = (newCategory) => {
     setSelectedFilter(newCategory);
     setDisplayCount(20); // Reset pagination when changing filter
+    
+    console.log('Selected filter:', newCategory);
+    console.log('Products before filter:', products.length);
   };
 
   const handleAddToCart = (e, product) => {
