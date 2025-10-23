@@ -31,16 +31,30 @@ const CategoryPageNew = () => {
   const displayedProducts = useMemo(() => {
     let filtered = products;
     
+    console.log('Filter applied:', selectedFilter, 'Total products:', products.length);
+    
     // Filter by selected collection - only if not "all"
     if (selectedFilter !== 'all') {
       filtered = products.filter(p => {
-        // Check if product has this collection in its tags
-        return p.tags?.some(tag => {
-          const tagLower = tag.toLowerCase();
-          const filterLower = selectedFilter.toLowerCase();
-          return tagLower.includes(filterLower) || filterLower.includes(tagLower);
+        // Check if product has this collection in its tags (more flexible matching)
+        const hasMatch = p.tags?.some(tag => {
+          const tagLower = tag.toLowerCase().trim();
+          const filterLower = selectedFilter.toLowerCase().trim();
+          
+          // Try exact match first
+          if (tagLower === filterLower) return true;
+          
+          // Try partial match
+          if (tagLower.includes(filterLower) || filterLower.includes(tagLower)) return true;
+          
+          // Try matching collection title from collections list
+          return false;
         });
+        
+        return hasMatch;
       });
+      
+      console.log('Filtered products:', filtered.length);
     }
     
     // Sort products
@@ -66,7 +80,10 @@ const CategoryPageNew = () => {
         break;
     }
     
-    return sorted.slice(0, displayCount);
+    const displayed = sorted.slice(0, displayCount);
+    console.log('Displayed products:', displayed.length);
+    
+    return displayed;
   }, [products, displayCount, selectedFilter, sortBy]);
 
   useEffect(() => {
