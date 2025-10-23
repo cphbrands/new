@@ -222,10 +222,11 @@ export const shopifyService = {
         hasNextPage = pageInfo.hasNextPage;
         cursor = pageInfo.endCursor;
         
-        console.log(`Fetched ${products.length} products. Total so far: ${allProducts.length}. Has more: ${hasNextPage}`);
+        // Remove verbose logging in production
+        // console.log(`Fetched ${products.length} products. Total so far: ${allProducts.length}. Has more: ${hasNextPage}`);
       }
       
-      console.log(`Total products fetched: ${allProducts.length}`);
+      // console.log(`Total products fetched: ${allProducts.length}`);
       return allProducts;
     } catch (error) {
       console.error('Error fetching Shopify products:', error);
