@@ -94,9 +94,11 @@ const CategoryPageNew = () => {
       try {
         // Force refresh to get new categorization
         const shopifyProducts = await getShopifyProductsByCategory(category);
-        setProducts(shopifyProducts);
+        setAllProducts(shopifyProducts); // Store all products
+        setProducts(shopifyProducts); // Display all initially
         setDisplayCount(20); // Reset display count
         setSelectedFilter('all'); // Reset filter
+        setSelectedCollection(null);
       } catch (error) {
         console.error('Error loading products:', error);
         toast({
@@ -113,17 +115,21 @@ const CategoryPageNew = () => {
     // Cleanup function
     return () => {
       setProducts([]);
+      setAllProducts([]);
       setDisplayCount(20);
       setSelectedFilter('all');
+      setSelectedCollection(null);
     };
   }, [category, t]);
   
   const handleCategoryChange = (newCategory) => {
     setSelectedFilter(newCategory);
     setDisplayCount(20); // Reset pagination when changing filter
-    
-    console.log('Selected filter:', newCategory);
-    console.log('Products before filter:', products.length);
+  };
+  
+  const handleCollectionSelect = (collection) => {
+    setSelectedCollection(collection);
+    console.log('Collection selected:', collection);
   };
 
   const handleAddToCart = (e, product) => {
