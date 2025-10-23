@@ -73,8 +73,11 @@ const CategoryPageNew = () => {
     const loadProducts = async () => {
       setLoading(true);
       try {
+        // Force refresh to get new categorization
         const shopifyProducts = await getShopifyProductsByCategory(category);
         setProducts(shopifyProducts);
+        setDisplayCount(20); // Reset display count
+        setSelectedFilter('all'); // Reset filter
       } catch (error) {
         console.error('Error loading products:', error);
         toast({
