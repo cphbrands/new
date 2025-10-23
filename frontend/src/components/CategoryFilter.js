@@ -1,31 +1,56 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useParams } from 'react-router-dom';
 import { getShopifyCollections } from '../data/shopifyCollections';
 import { ChevronDown } from 'lucide-react';
 
 const CategoryFilter = ({ selectedCategory, onCategoryChange }) => {
   const { t } = useTranslation();
+  const { category } = useParams();
   const [collections, setCollections] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const loadCollections = async () => {
       const cols = await getShopifyCollections();
-      setCollections(cols);
+      
+      // Filter collections based on current category
+      const filtered = cols.filter(col => {
+        const title = col.title.toLowerCase();
+        const handle = col.handle.toLowerCase();
+        
+        if (category === 'julepynt') {
+          // Only show Christmas-related collections
+          return title.includes('jul') || 
+                 title.includes('christmas') || 
+                 title.includes('xmas') ||
+                 title.includes('jule') ||
+                 handle.includes('jul') ||
+                 handle.includes('christmas');
+        } else {
+          // For gaver, show everything else (non-Christmas)
+          return !(title.includes('jul') || 
+                   title.includes('christmas') || 
+                   title.includes('xmas') ||
+                   title.includes('jule') ||
+                   handle.includes('jul') ||
+                   handle.includes('christmas'));
+        }
+      });
+      
+      setCollections(filtered);
     };
     loadCollections();
-  }, []);
+  }, [category]);
 
   const defaultCategories = [
     { handle: 'all', title: t('category.all') },
-    { handle: 'julepynt', title: t('category.julepynt.title') },
-    { handle: 'gaver', title: t('category.gaver.title') },
   ];
 
   const allCategories = [...defaultCategories, ...collections];
 
   return (
-    <div className="mb-8">
+    <div className="mb-0">
       <div className="relative inline-block">
         <button
           onClick={() => setIsOpen(!isOpen)}
