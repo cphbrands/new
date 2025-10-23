@@ -23,7 +23,7 @@ export const getShopifyProducts = async (forceRefresh = false) => {
   }
 
   try {
-    pendingRequest = shopifyService.getAllProducts(250);
+    pendingRequest = shopifyService.getAllProducts(); // No limit, will paginate
     const products = await pendingRequest;
     cachedProducts = products;
     cacheTimestamp = Date.now();
