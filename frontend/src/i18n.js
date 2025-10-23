@@ -63,6 +63,8 @@ const resources = {
       'cart.total': 'Total',
       'cart.checkout': 'Gå til kassen',
       'cart.checkoutAlert': 'Checkout funktionalitet vil blive implementeret senere',
+      'cart.checkoutError': 'Kunne ikke oprette checkout. Prøv igen.',
+      'cart.processing': 'Behandler...',
       'cart.summary': 'Ordre oversigt',
       'cart.christmasGift': 'Dette er en julegave',
       'cart.christmasGift.info': 'Udvidet returret gælder frem til januar 2026',
