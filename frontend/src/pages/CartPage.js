@@ -143,12 +143,18 @@ const CartPage = () => {
               </div>
 
               <button
-                onClick={() => {
-                  alert(t('cart.checkoutAlert'));
-                }}
-                className="w-full bg-zinc-900 text-white py-4 rounded-md hover:bg-zinc-800 transition-colors font-medium mb-3"
+                onClick={handleCheckout}
+                disabled={checkoutLoading}
+                className="w-full bg-zinc-900 text-white py-4 rounded-md hover:bg-zinc-800 transition-colors font-medium mb-3 disabled:bg-zinc-400 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
-                {t('cart.checkout')}
+                {checkoutLoading ? (
+                  <>
+                    <Loader2 className="w-5 h-5 animate-spin" />
+                    {t('cart.processing')}
+                  </>
+                ) : (
+                  t('cart.checkout')
+                )}
               </button>
               
               {/* Julegave Checkbox - Diskret */}
