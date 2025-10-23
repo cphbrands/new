@@ -30,7 +30,7 @@ const CategoryPageNew = () => {
   const title = useMemo(() => t(`category.${category}.title`), [category, t]);
   const description = useMemo(() => t(`category.${category}.desc`), [category, t]);
   
-  const displayedProducts = useMemo(() => {
+  const { displayedProducts, filteredCount } = useMemo(() => {
     console.log('=== FILTER DEBUG ===');
     console.log('Selected filter:', selectedFilter);
     console.log('All products count:', allProducts.length);
@@ -40,22 +40,13 @@ const CategoryPageNew = () => {
     // Filter by selected collection - only if not "all"
     if (selectedFilter !== 'all') {
       filtered = allProducts.filter(p => {
-        console.log('Product:', p.name, 'Tags:', p.tags);
-        
         // Check if product has this collection in its tags (more flexible matching)
         const hasMatch = p.tags?.some(tag => {
           const tagLower = tag.toLowerCase().trim();
           const filterLower = selectedFilter.toLowerCase().trim();
           
-          // Log matching attempts
-          const exactMatch = tagLower === filterLower;
-          const partialMatch = tagLower.includes(filterLower) || filterLower.includes(tagLower);
-          
-          if (exactMatch || partialMatch) {
-            console.log('MATCH FOUND:', tag, 'matches', selectedFilter);
-          }
-          
-          return exactMatch || partialMatch;
+          // Try exact match or partial match
+          return tagLower === filterLower || tagLower.includes(filterLower) || filterLower.includes(tagLower);
         });
         
         return hasMatch;
@@ -90,7 +81,10 @@ const CategoryPageNew = () => {
     const displayed = sorted.slice(0, displayCount);
     console.log('Final displayed:', displayed.length);
     
-    return displayed;
+    return {
+      displayedProducts: displayed,
+      filteredCount: filtered.length
+    };
   }, [allProducts, displayCount, selectedFilter, sortBy]);
 
   useEffect(() => {
