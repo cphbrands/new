@@ -31,32 +31,37 @@ const CategoryPageNew = () => {
   const description = useMemo(() => t(`category.${category}.desc`), [category, t]);
   
   const displayedProducts = useMemo(() => {
-    let filtered = products;
+    console.log('=== FILTER DEBUG ===');
+    console.log('Selected filter:', selectedFilter);
+    console.log('All products count:', allProducts.length);
     
-    console.log('Filter applied:', selectedFilter, 'Total products:', products.length);
+    let filtered = allProducts;
     
     // Filter by selected collection - only if not "all"
     if (selectedFilter !== 'all') {
-      filtered = products.filter(p => {
+      filtered = allProducts.filter(p => {
+        console.log('Product:', p.name, 'Tags:', p.tags);
+        
         // Check if product has this collection in its tags (more flexible matching)
         const hasMatch = p.tags?.some(tag => {
           const tagLower = tag.toLowerCase().trim();
           const filterLower = selectedFilter.toLowerCase().trim();
           
-          // Try exact match first
-          if (tagLower === filterLower) return true;
+          // Log matching attempts
+          const exactMatch = tagLower === filterLower;
+          const partialMatch = tagLower.includes(filterLower) || filterLower.includes(tagLower);
           
-          // Try partial match
-          if (tagLower.includes(filterLower) || filterLower.includes(tagLower)) return true;
+          if (exactMatch || partialMatch) {
+            console.log('MATCH FOUND:', tag, 'matches', selectedFilter);
+          }
           
-          // Try matching collection title from collections list
-          return false;
+          return exactMatch || partialMatch;
         });
         
         return hasMatch;
       });
       
-      console.log('Filtered products:', filtered.length);
+      console.log('Filtered to:', filtered.length, 'products');
     }
     
     // Sort products
@@ -83,10 +88,10 @@ const CategoryPageNew = () => {
     }
     
     const displayed = sorted.slice(0, displayCount);
-    console.log('Displayed products:', displayed.length);
+    console.log('Final displayed:', displayed.length);
     
     return displayed;
-  }, [products, displayCount, selectedFilter, sortBy]);
+  }, [allProducts, displayCount, selectedFilter, sortBy]);
 
   useEffect(() => {
     const loadProducts = async () => {
