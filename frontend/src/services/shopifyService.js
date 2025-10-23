@@ -168,14 +168,20 @@ const transformProduct = (shopifyProduct) => {
 const determineCategory = (tags) => {
   const lowerTags = tags.map(t => t.toLowerCase());
   
-  if (lowerTags.some(t => t.includes('jul') || t.includes('christmas') || t.includes('xmas'))) {
+  // Check for Christmas/Jul tags first (priority)
+  if (lowerTags.some(t => 
+    t.includes('jul') || 
+    t.includes('christmas') || 
+    t.includes('xmas') ||
+    t.includes('jule') ||
+    t.includes('noel') ||
+    t.includes('weihnacht')
+  )) {
     return 'julepynt';
   }
-  if (lowerTags.some(t => t.includes('gave') || t.includes('gift'))) {
-    return 'gaver';
-  }
   
-  return 'gaver'; // Default category
+  // Everything else goes to gifts
+  return 'gaver';
 };
 
 export const shopifyService = {
