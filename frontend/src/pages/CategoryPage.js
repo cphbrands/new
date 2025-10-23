@@ -181,7 +181,7 @@ const CategoryPageNew = () => {
           <div className="relative text-center py-16 px-4 text-white">
             <div className="flex items-center justify-center gap-2 mb-3">
               <span className="text-sm bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
-                {products.length} {t('common.products')}
+                {allProducts.length} {t('common.products')}
               </span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-4">{title}</h1>
