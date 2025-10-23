@@ -200,6 +200,7 @@ const CategoryPageNew = () => {
           <CategoryFilter 
             selectedCategory={selectedFilter} 
             onCategoryChange={handleCategoryChange}
+            onCollectionSelect={handleCollectionSelect}
           />
           
           {/* Sort Dropdown */}
