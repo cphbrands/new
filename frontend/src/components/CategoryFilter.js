@@ -75,10 +75,7 @@ const CategoryFilter = ({ selectedCategory, onCategoryChange, onCollectionSelect
             {allCategories.map(cat => (
               <button
                 key={cat.handle}
-                onClick={() => {
-                  onCategoryChange(cat.handle);
-                  setIsOpen(false);
-                }}
+                onClick={() => handleSelect(cat)}
                 className={`w-full px-4 py-2 text-left hover:bg-zinc-50 transition-colors ${
                   selectedCategory === cat.handle ? 'bg-zinc-100 font-medium' : ''
                 }`}
