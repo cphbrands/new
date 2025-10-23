@@ -20,9 +20,11 @@ const CategoryPageNew = () => {
   const { t } = useTranslation();
   const [quickViewProduct, setQuickViewProduct] = useState(null);
   const [products, setProducts] = useState([]);
+  const [allProducts, setAllProducts] = useState([]); // Store all products
   const [loading, setLoading] = useState(true);
   const [displayCount, setDisplayCount] = useState(20);
   const [selectedFilter, setSelectedFilter] = useState('all');
+  const [selectedCollection, setSelectedCollection] = useState(null);
   const [sortBy, setSortBy] = useState('default');
 
   const title = useMemo(() => t(`category.${category}.title`), [category, t]);
