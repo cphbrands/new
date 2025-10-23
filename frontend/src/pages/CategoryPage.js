@@ -296,13 +296,13 @@ const CategoryPageNew = () => {
         </div>
           
           {/* Load More Button */}
-          {displayCount < filtered.length && (
+          {displayCount < filteredCount && (
             <div className="text-center mt-12">
               <button
                 onClick={() => setDisplayCount(prev => prev + 20)}
                 className="bg-zinc-900 text-white px-8 py-3 rounded-md hover:bg-zinc-800 transition-colors"
               >
-                {t('category.loadMore')} ({filtered.length - displayCount} {t('category.remaining')})
+                {t('category.loadMore')} ({filteredCount - displayCount} {t('category.remaining')})
               </button>
             </div>
           )}
