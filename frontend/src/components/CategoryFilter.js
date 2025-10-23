@@ -20,21 +20,15 @@ const CategoryFilter = ({ selectedCategory, onCategoryChange }) => {
         const handle = col.handle.toLowerCase();
         
         if (category === 'julepynt') {
-          // Only show Christmas-related collections
-          return title.includes('jul') || 
-                 title.includes('christmas') || 
-                 title.includes('xmas') ||
-                 title.includes('jule') ||
-                 handle.includes('jul') ||
-                 handle.includes('christmas');
+          // Show ALL collections for julepynt (everything is Christmas related)
+          return true;
         } else {
-          // For gaver, show everything else (non-Christmas)
-          return !(title.includes('jul') || 
-                   title.includes('christmas') || 
-                   title.includes('xmas') ||
-                   title.includes('jule') ||
-                   handle.includes('jul') ||
-                   handle.includes('christmas'));
+          // For gaver, show only specific gift-related collections
+          // Only show if explicitly tagged as "gave" or "gift"
+          return title.includes('gave') || 
+                 title.includes('gift') ||
+                 handle.includes('gave') ||
+                 handle.includes('gift');
         }
       });
       
