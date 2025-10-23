@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Trash2, Plus, Minus, ShoppingBag } from 'lucide-react';
+import { Trash2, Plus, Minus, ShoppingBag, Loader2 } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { useCurrency } from '../context/CurrencyContext';
 import { useTranslation } from 'react-i18next';
+import { createShopifyCheckout } from '../services/shopifyCheckout';
+import { toast } from '../hooks/use-toast';
 import SEO from '../components/SEO';
 
 const CartPage = () => {
@@ -12,10 +14,28 @@ const CartPage = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const [isChristmasGift, setIsChristmasGift] = useState(false);
+  const [checkoutLoading, setCheckoutLoading] = useState(false);
 
   const subtotal = getCartTotal();
   const shippingCost = 0; // Fri fragt altid
   const total = subtotal + shippingCost;
+
+  const handleCheckout = async () => {
+    setCheckoutLoading(true);
+    try {
+      const checkoutUrl = await createShopifyCheckout(cart);
+      // Redirect to Shopify checkout
+      window.location.href = checkoutUrl;
+    } catch (error) {
+      console.error('Checkout error:', error);
+      toast({
+        title: t('common.error'),
+        description: t('cart.checkoutError'),
+        variant: 'destructive'
+      });
+      setCheckoutLoading(false);
+    }
+  };
 
   if (cart.length === 0) {
     return (
