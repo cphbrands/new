@@ -14,8 +14,8 @@ const shopifyClient = axios.create({
 
 // GraphQL query for products
 const PRODUCTS_QUERY = `
-  query GetProducts($first: Int!) {
-    products(first: $first) {
+  query GetProducts($first: Int!, $after: String) {
+    products(first: $first, after: $after) {
       edges {
         node {
           id
@@ -54,6 +54,7 @@ const PRODUCTS_QUERY = `
             }
           }
         }
+        cursor
       }
       pageInfo {
         hasNextPage
