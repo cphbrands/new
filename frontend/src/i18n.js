@@ -196,6 +196,8 @@ const resources = {
       'cart.total': 'Total',
       'cart.checkout': 'Proceed to checkout',
       'cart.checkoutAlert': 'Checkout functionality will be implemented later',
+      'cart.checkoutError': 'Could not create checkout. Please try again.',
+      'cart.processing': 'Processing...',
       'cart.summary': 'Order summary',
       'cart.christmasGift': 'This is a Christmas gift',
       'cart.christmasGift.info': 'Extended return policy applies until January 2026',
