@@ -186,7 +186,7 @@ const determineCategory = (tags) => {
 
 export const shopifyService = {
   // Fetch all products
-  async getAllProducts(limit = 50) {
+  async getAllProducts(limit = 250) {
     try {
       const response = await shopifyClient.post('/graphql.json', {
         query: PRODUCTS_QUERY,
