@@ -187,21 +187,45 @@ const determineCategory = (tags) => {
 };
 
 export const shopifyService = {
-  // Fetch all products
-  async getAllProducts(limit = 250) {
+  // Fetch all products with pagination
+  async getAllProducts() {
     try {
-      const response = await shopifyClient.post('/graphql.json', {
-        query: PRODUCTS_QUERY,
-        variables: { first: limit }
-      });
+      let allProducts = [];
+      let hasNextPage = true;
+      let cursor = null;
       
-      if (response.data.errors) {
-        console.error('Shopify GraphQL errors:', response.data.errors);
-        throw new Error('Failed to fetch products from Shopify');
+      while (hasNextPage) {
+        const query = cursor 
+          ? PRODUCTS_QUERY.replace('query GetProducts($first: Int!)', 'query GetProducts($first: Int!, $after: String)')
+              .replace('products(first: $first)', 'products(first: $first, after: $after)')
+          : PRODUCTS_QUERY;
+        
+        const variables = cursor 
+          ? { first: 250, after: cursor }
+          : { first: 250 };
+        
+        const response = await shopifyClient.post('/graphql.json', {
+          query: query,
+          variables: variables
+        });
+        
+        if (response.data.errors) {
+          console.error('Shopify GraphQL errors:', response.data.errors);
+          break;
+        }
+        
+        const products = response.data.data.products.edges.map(transformProduct);
+        allProducts = [...allProducts, ...products];
+        
+        const pageInfo = response.data.data.products.pageInfo;
+        hasNextPage = pageInfo.hasNextPage;
+        cursor = pageInfo.endCursor;
+        
+        console.log(`Fetched ${products.length} products. Total so far: ${allProducts.length}. Has more: ${hasNextPage}`);
       }
       
-      const products = response.data.data.products.edges.map(transformProduct);
-      return products;
+      console.log(`Total products fetched: ${allProducts.length}`);
+      return allProducts;
     } catch (error) {
       console.error('Error fetching Shopify products:', error);
       throw error;
