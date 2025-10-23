@@ -17,7 +17,7 @@ export const getShopifyProducts = async () => {
   }
 
   try {
-    pendingRequest = shopifyService.getAllProducts(100);
+    pendingRequest = shopifyService.getAllProducts(250);
     const products = await pendingRequest;
     cachedProducts = products;
     cacheTimestamp = Date.now();
