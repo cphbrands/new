@@ -168,20 +168,22 @@ const transformProduct = (shopifyProduct) => {
 const determineCategory = (tags) => {
   const lowerTags = tags.map(t => t.toLowerCase());
   
-  // Check for Christmas/Jul tags first (priority)
-  if (lowerTags.some(t => 
-    t.includes('jul') || 
-    t.includes('christmas') || 
-    t.includes('xmas') ||
-    t.includes('jule') ||
-    t.includes('noel') ||
-    t.includes('weihnacht')
-  )) {
-    return 'julepynt';
+  // Check if explicitly tagged as "gave" or "gift" (only these go to gaver)
+  const isGift = lowerTags.some(t => 
+    t === 'gave' || 
+    t === 'gaver' || 
+    t === 'gift' || 
+    t === 'gifts' ||
+    t.includes('gaveidé') ||
+    t.includes('present')
+  );
+  
+  if (isGift) {
+    return 'gaver';
   }
   
-  // Everything else goes to gifts
-  return 'gaver';
+  // Everything else (including jul, christmas, betlehem, kranse, etc.) goes to julepynt
+  return 'julepynt';
 };
 
 export const shopifyService = {
