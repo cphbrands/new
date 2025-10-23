@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { getShopifyCollections } from '../data/shopifyCollections';
 import { ChevronDown } from 'lucide-react';
 
-const CategoryFilter = ({ selectedCategory, onCategoryChange }) => {
+const CategoryFilter = ({ selectedCategory, onCategoryChange, onCollectionSelect }) => {
   const { t } = useTranslation();
   const { category } = useParams();
   const [collections, setCollections] = useState([]);
@@ -42,6 +42,17 @@ const CategoryFilter = ({ selectedCategory, onCategoryChange }) => {
   ];
 
   const allCategories = [...defaultCategories, ...collections];
+
+  const handleSelect = (cat) => {
+    if (cat.handle === 'all') {
+      onCategoryChange('all');
+    } else {
+      // Pass both handle and full collection object
+      onCollectionSelect && onCollectionSelect(cat);
+      onCategoryChange(cat.handle);
+    }
+    setIsOpen(false);
+  };
 
   return (
     <div className="mb-0">
