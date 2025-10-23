@@ -131,15 +131,31 @@ const CategoryPageNew = () => {
       />
       
       <div className="container mx-auto px-4 py-8">
-        {/* Header */}
-        <div className="mb-12 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">{title}</h1>
-          <p className="text-xl text-zinc-600 max-w-2xl mx-auto">{description}</p>
-          <p className="text-sm text-zinc-500 mt-4">{products.length} {t('common.products')}</p>
+        {/* Enhanced Category Header */}
+        <div className="relative mb-12 rounded-2xl overflow-hidden">
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+              backgroundImage: category === 'julepynt' 
+                ? 'url(https://images.unsplash.com/photo-1512389142860-9c449e58a543?w=1600)'
+                : 'url(https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=1600)',
+            }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
+          </div>
+          <div className="relative text-center py-16 px-4 text-white">
+            <div className="flex items-center justify-center gap-2 mb-3">
+              <span className="text-sm bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
+                {products.length} {t('common.products')}
+              </span>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">{title}</h1>
+            <p className="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">{description}</p>
+          </div>
         </div>
 
-        {/* Category Filter */}
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
+        {/* Filter and Sort Bar */}
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 bg-white p-4 rounded-lg border border-zinc-200 shadow-sm">
           <CategoryFilter 
             selectedCategory={selectedFilter} 
             onCategoryChange={handleCategoryChange}
